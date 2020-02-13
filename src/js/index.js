@@ -118,6 +118,21 @@ $(function() {
   let popapListCloser = $(".d_popapListHuman__closerBtn");
   let popapListPrevbtn = $(".d_popapSliderBtn__prev");
   let popapListNextbtn = $(".d_popapSliderBtn__next");
+  let d_btnCloserPopapVideoHub = $('.d_popapVideo__closer');
+  d_btnCloserPopapVideoHub.on('click', ()=>{
+    $('.d_popapVideo').addClass('d-n');
+    $('main').removeClass('d_blur');
+  })
+  $('.d_sliderFirst__video_a').on('click',(e)=>{
+    e.preventDefault();
+    $('main').addClass('d_blur');
+    $('.d_popapVideo').removeClass('d-n');
+  })
+  $('.d_sliderLast__video_a').on('click',(e)=>{
+    e.preventDefault();
+    $('main').addClass('d_blur');
+    $('.d_popapVideo').removeClass('d-n');
+  })
 
   popapListCloser.on("click", e => {
     $(".d_popapListHuman").addClass("d-n");
