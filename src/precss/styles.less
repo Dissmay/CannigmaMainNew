@@ -355,7 +355,7 @@ svg {
       max-height: 10px;
       max-width: 10px;
       border-radius: 12px;
-      border: 2px solid #fb8381;
+      border: 7px solid #fb8381;
       margin-right: 8px;
       opacity: 1;
     }
@@ -392,6 +392,12 @@ svg {
     height: 400px;
     background-color: @pink;
     position: relative;
+    width: 100%;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     &_span {
       position: absolute;
       display: block;
@@ -1073,7 +1079,7 @@ svg {
    
    & .slick-active button:before{
       background-color: @blue;
-      border: 3px solid @blue;
+      border: 5px solid @blue;
     }
     & .slick-dots li.slick-active button:before {
       opacity: 1.75;
@@ -1215,7 +1221,7 @@ svg {
  
   & .slick-active button:before{
     background-color: @blue;
-    border: 3px solid @blue;
+    border: 5px solid @blue;
   }
   & .slick-dots li.slick-active button:before {
     opacity: 1.75;
@@ -1357,11 +1363,16 @@ svg {
     });
     &_img {
       position: relative;
-    
+      height: 370px;
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
      
       &__text {
         position: absolute;
-        bottom: 5px;
+        bottom: 0px;
         font-size: 25px;
         font-weight: bold;
         color: white;
@@ -1569,6 +1580,11 @@ svg {
     &_img {
       // background-color: red;
       flex-grow: 1;
+      & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       .media(1024px,{
         flex-grow: 0;
       });
@@ -1804,6 +1820,7 @@ svg {
     &_text {
       position: absolute;
       bottom: 0;
+      left: 0;
       font-size: 25px;
       font-weight: bold;
       color: white;
@@ -2000,7 +2017,7 @@ svg {
       max-height: 10px;
       max-width: 10px;
       border-radius: 12px;
-      border: 2px solid #fb8381;
+      border: 7px solid #fb8381;
       margin-right: 8px;
       opacity: 1;
     }
@@ -2113,7 +2130,7 @@ svg {
       max-height: 10px;
       max-width: 10px;
       border-radius: 12px;
-      border: 2px solid #fb8381;
+      border: 7px solid #fb8381;
       margin-right: 8px;
       opacity: 1;
     }
@@ -2396,7 +2413,7 @@ svg {
         max-height: 10px;
         max-width: 10px;
         border-radius: 12px;
-        border: 2px solid #fb8381;
+        border: 7px solid #fb8381;
         margin-right: 8px;
         opacity: 1;
       }
