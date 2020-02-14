@@ -1,9 +1,12 @@
+@import "libs/vars.less";
+@import "libs/mixins.less";
+
 .d_popapVideoWrapperFull {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-.d_popapVideo {
+  .d_popapVideo {
     position: fixed;
     top: 100px;
     left: 0;
@@ -20,9 +23,7 @@
       height: 40px;
       background-color: transparent;
       border: none;
-      .media(375px,{
-        top: -40px;
-      });
+     
   
       &:before,
       &:after {
