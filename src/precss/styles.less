@@ -2745,7 +2745,7 @@ height: 54vh;
 }
 .d_popapVideo {
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
   bottom: 0;
   right: 0;
@@ -2760,6 +2760,9 @@ height: 54vh;
     height: 40px;
     background-color: transparent;
     border: none;
+    .media(375px,{
+      top: -40px;
+    });
 
     &:before,
     &:after {
