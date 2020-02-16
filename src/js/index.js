@@ -141,7 +141,7 @@ $(function() {
   
   let d_btnCloserPopapVideoHub = $('.d_popapVideo__closer');
   d_btnCloserPopapVideoHub.on('click', ()=>{
-    $('.d_popapVideo').addClass('d-n');
+    $('.d_popapVideo').addClass('d-none');
     $('main').removeClass('d_blur');
     // $('main').style.zIndex= '0';
 
@@ -153,7 +153,7 @@ $(function() {
     $('main').addClass('d_blur');
     // $('main').style.zIndex= '100';
 
-    $('.d_popapVideo').removeClass('d-n');
+    $('.d_popapVideo').removeClass('d-none');
     $('.l-header__container').addClass('d_blur');
 
 
@@ -162,7 +162,7 @@ $(function() {
     e.preventDefault();
     $('main').addClass('d_blur');
     // $('main').style.zIndex= '100';
-    $('.d_popapVideo').removeClass('d-n');
+    $('.d_popapVideo').removeClass('d-none');
     $('.l-header__container').addClass('d_blur');
 
   })
