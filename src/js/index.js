@@ -143,16 +143,28 @@ $(function() {
   d_btnCloserPopapVideoHub.on('click', ()=>{
     $('.d_popapVideo').addClass('d-n');
     $('main').removeClass('d_blur');
+    // $('main').style.zIndex= '0';
+
+    $('.l-header__container').removeClass('d_blur');
+
   })
   $('.d_sliderFirst__video_a').on('click',(e)=>{
     e.preventDefault();
     $('main').addClass('d_blur');
+    // $('main').style.zIndex= '100';
+
     $('.d_popapVideo').removeClass('d-n');
+    $('.l-header__container').addClass('d_blur');
+
+
   })
   $('.d_sliderLast__video_a').on('click',(e)=>{
     e.preventDefault();
     $('main').addClass('d_blur');
+    // $('main').style.zIndex= '100';
     $('.d_popapVideo').removeClass('d-n');
+    $('.l-header__container').addClass('d_blur');
+
   })
 
   popapListCloser.on("click", e => {
@@ -167,7 +179,8 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
-
+    
+    $('.d_experts__h')[1].innerText = target.attr('data-btnText');
     $(".d_popapListHuman").removeClass("d-n");
 
     let listImg = $(".d_popapSliderImg").children();
@@ -201,6 +214,7 @@ $(function() {
     let slider = $(".d_popapSliderImg").children();
     let ulSliderList = $(".d_popapUlHuman");
     let indUl = null;
+
     const filteredList = slider.filter((i, e) => {
       return !$(e).hasClass("d-n");
     });
@@ -232,7 +246,11 @@ $(function() {
 
       $(e).removeClass("active");
     });
-
+    let dataText = $(filteredList[ind]).attr('data-Text');
+    
+    $('.d_experts__h')[1].innerText = dataText;
+    
+    
     $(filteredList[ind]).addClass("active");
   });
   popapListPrevbtn.on("click", e => {
@@ -255,9 +273,10 @@ $(function() {
       }
       $(e).removeClass("active");
     });
-
+   
     $(filteredListUl[indUl]).addClass("active");
-
+    
+    
     let ind = null;
     const filteredList = slider.filter((i, e) => {
       return !$(e).hasClass("d-n");
@@ -282,6 +301,9 @@ $(function() {
     });
 
     $(filteredList[ind]).addClass("active");
+    let dataText = $(filteredList[ind]).attr('data-Text');
+    
+    $('.d_experts__h')[1].innerText = dataText; 
   });
   let newDataIdImg = null;
 
@@ -290,6 +312,7 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
+    $('.d_experts__h')[1].innerText = target.attr('data-btnText');
 
     let dataIdImg = $(".d_popapSliderImg__img");
 
@@ -467,7 +490,6 @@ $(function() {
     let target = $(e.target);
     arrowHeartMan[0].style.opacity = "0";
     arrowHeart[0].style.opacity = "1";
-    console.log(target[0].getAttribute('data-Text'));
     
      $('.d_human__list__h')[0].innerText = target[0].getAttribute('data-Text')
     ulActive.map((index, ul) => {
@@ -499,9 +521,9 @@ $(function() {
     let target = $(e.target);
     arrowHeartMan[0].style.opacity = "1";
     arrowHeart[0].style.opacity = "0";
-    console.log(target[0].getAttribute('data-Text'));
     
     $('.d_human__list__h')[0].innerText = target[0].getAttribute('data-Text')
+    
     Array.prototype.forEach.call(ulActive, ul => {
       ul.classList.remove("active");
     });
@@ -718,7 +740,7 @@ $(function() {
         $('.d_human__list__h')[0].innerText = $(activeElips)[0].getAttribute('data-Text')
 
         
-        console.log();
+       
         
         arrowHeartMan[0].style.opacity = "0";
         arrowHeart[0].style.opacity = "1";

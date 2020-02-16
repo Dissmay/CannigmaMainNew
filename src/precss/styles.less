@@ -543,6 +543,10 @@ svg {
   &__news {
     display: flex;
     flex-direction: column;
+    background-color: #F7F7F7;
+    padding-left: 14px;
+    padding-right: 14px; 
+    padding-top: 30px; 
   }
   &__newsLi {
     position: relative;
@@ -553,6 +557,7 @@ svg {
     display: flex;
     box-shadow: 0 0 10px rgba(57, 62, 70, 0.15);
     margin-bottom: 35px;
+    
     & a{
       position: absolute;
       top: 0;
@@ -768,7 +773,14 @@ svg {
           background-color: @blue;
           width: 29px;
           height: 29px;
+          opacity: 1;
         }
+        .media(576px,{
+          width: 25px;
+          height: 25px;
+          opacity: 0.5;
+
+        });
         .media(420px,{ 
           width: 25px;
           height: 25px;
@@ -866,9 +878,10 @@ svg {
   &__list {
     .size(5);
     background-color: #e7f7f5;
-    padding-left: 25px;
+    // padding-left: 25px;
     padding-top: 18px;
-    padding-right: 25px;
+    // padding-right: 25px;
+    // margin-left: 25px;
     padding-bottom: 51px;
 
     .media(576px,{
@@ -884,6 +897,8 @@ svg {
       color: @blue;
       font-size: 30px;
       line-height: 30px;
+      margin-left: 25px;
+      margin-right: 25px;
     }
     &_girl {
       width: 100%;
@@ -996,9 +1011,22 @@ svg {
     }
     &_ul {
       list-style-type: none;
-      overflow-y: scroll;
+      overflow-y: auto;
       height: 500px;
       display: none;
+      margin-left: 25px;
+      padding-right: 25px;
+      width: 283px;
+      .media(1025px,{
+        width: 360px;
+      });
+      .media(769px,{
+        width: 270px;
+      });
+      .media(576px,{
+        width: 70px;
+      });
+
       &.active {
         display: block;
       }
@@ -1338,7 +1366,6 @@ svg {
     padding-top: 40px;
     padding-left: 50px;
     padding-right: 70px;
-    border-right: 1px solid #d1d1d1;
     
    
     .media(1024px,{
@@ -1374,6 +1401,19 @@ svg {
   &__card {
     width: 370px;
     position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 110%;
+      width: 1px;
+      background-color: #D1D1D1;
+      right: -84px;
+      .media(1024px,{
+        display: none;
+      });
+
+    }
+
     &_a{
       position: absolute;
       top: 0;
@@ -1395,6 +1435,13 @@ svg {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+      &__height400{
+        height: 400px;
+      }
+      &__height250{
+        height: 250px;
+
       }
      
       &__text {
@@ -1418,6 +1465,8 @@ svg {
       padding-right: 27px;
       padding-bottom: 20px;
       background-color: #fff;
+     
+
       .media(420px,{
         padding-bottom: 15px;
         padding-top: 12px;
@@ -1429,6 +1478,7 @@ svg {
       color: @blue;
       font-size: 30px;
       font-weight: bold;
+     
       margin-bottom: 15px;
       .size(13);
       .media(420px,{
@@ -1444,6 +1494,9 @@ svg {
       font-size: 15px;
       line-height: 20px;
       width: 194px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+       overflow: hidden;
       .media(420px,{
         font-size: 15px;
         width: 100%;
@@ -1646,9 +1699,9 @@ svg {
   justify-content: center;
   align-items: center;
   background-color: @blue;
-  padding-top: 19px;
-  padding-bottom: 19px;
-  padding-bottom: 15px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  padding-bottom: 21px;
   .media(1024px,{
    flex-direction: column;
    justify-content: space-between;
@@ -1685,6 +1738,7 @@ svg {
     font-family: Roboto;
     font-weight: regular;
     line-height: 58px;
+    padding-right: 30px;
     .media(1024px,{
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       margin-bottom: 12px;
@@ -1754,6 +1808,7 @@ svg {
     padding-bottom: 21px;
     border-bottom: 1px solid @blue;
     margin-bottom: 35px;
+    color:@blue;
   }
   &__h {
     margin-left: 12px;
@@ -1872,7 +1927,7 @@ svg {
     font-weight: bold;
     font-size: 25px;
     width: 166px;
-   
+   color: @blue;
     line-height: 30px;
     .media(420px,{
     
@@ -1889,6 +1944,9 @@ svg {
     font-size: 15px;
     width: 162px;
     line-height: 22px;
+    text-overflow: ellipsis;
+     white-space: nowrap; 
+     overflow: hidden;
   }
 }
 .d_educationCenter {
