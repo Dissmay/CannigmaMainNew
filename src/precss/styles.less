@@ -932,6 +932,9 @@ svg {
           top: 38%;
           left: 29%;
         }
+        &:hover::before{
+          background-color: transparent;
+        }
         &:hover {
           background-color: @blue;
         }
@@ -986,6 +989,9 @@ svg {
           transform: rotate(45deg);
           top: 38%;
           left: 29%;
+        }
+        &:hover::before{
+          background-color: transparent;
         }
         &:hover {
           background-color: @blue;
@@ -1059,6 +1065,9 @@ svg {
       color: @blue;
       margin-bottom: 10px;
       position: relative;
+      &:hover{
+        color: red;
+       }
       &__a{
         position: absolute;
         top: 0;
@@ -1066,6 +1075,7 @@ svg {
         left: 0;
         right: 0;
         text-decoration: none;
+       
       }
 
       &:hover {
@@ -1767,6 +1777,9 @@ svg {
     line-height: 50px;
      
     });
+    &:hover{
+      background-color: @pink;
+    }
   }
 }
 .d_form__input::-webkit-input-placeholder {
