@@ -118,6 +118,26 @@ $(function() {
   let popapListCloser = $(".d_popapListHuman__closerBtn");
   let popapListPrevbtn = $(".d_popapSliderBtn__prev");
   let popapListNextbtn = $(".d_popapSliderBtn__next");
+  if($(window).height() == 812 ){
+      $('.d_popapUlHuman ').map((e,i)=>{
+        $(i)[0].style.height = "65vh"
+        
+      })
+  }
+  $(window).on('scroll', e =>{
+    let target = $(e.target);
+    let scrolledPixels = target.scrollTop();
+   if(scrolledPixels >= 108){
+     $('.d_popapListHuman')[0].style.top = "44px";
+    //  $('.d_popapUlHuman.active')[0].style.height = '67vh';
+    // console.log($('.d_popapUlHuman.active '));
+
+   }else{
+    $('.d_popapListHuman')[0].style.top = "109px";
+    // $('.d_popapUlHuman.active')[0].style.height = '54vh';
+   }
+
+  });
 
   $('.d_slideFirst').on('click', e=>{
       let target = $(e.target);
@@ -172,6 +192,7 @@ $(function() {
     $(".d_popapUlHuman").removeClass("active");
     $(".d_popapSliderImg__img").removeClass("active");
     let dataIdImg = $(".d_popapSliderImg__img");
+    $('body').css('overflowY', 'auto')
   });
   let copyDataImg = null;
   openPopapListBtnWoman.on("click", e => {
@@ -179,6 +200,11 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
+    $(window).scrollTop(110);
+    $('body').css('overflowY', 'hidden')
+    // console.log($(wi));
+  
+    
     
     $('.d_experts__h')[1].innerText = target.attr('data-btnText');
     $(".d_popapListHuman").removeClass("d-n");
@@ -312,6 +338,8 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
+    $(window).scrollTop(110);
+    $('body').css('overflowY', 'hidden')
     $('.d_experts__h')[1].innerText = target.attr('data-btnText');
 
     let dataIdImg = $(".d_popapSliderImg__img");
