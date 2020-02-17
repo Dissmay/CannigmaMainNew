@@ -979,6 +979,9 @@ svg {
         cursor: pointer;
         margin-left: 9px;
         position: relative;
+        &:visited{
+          color:white;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -1752,6 +1755,7 @@ svg {
     font-weight: regular;
     line-height: 58px;
     padding-right: 30px;
+    
     .media(1024px,{
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       margin-bottom: 12px;
@@ -1781,6 +1785,9 @@ svg {
      
     });
     &:hover{
+      background-color: @pink;
+    }
+    &:visited{
       background-color: @pink;
     }
   }
@@ -1850,12 +1857,16 @@ svg {
       border-bottom: 5px solid @blue;
       font-weight: bold;
     }
+    
   }
   &__tabLink {
     text-decoration: none;
     font-size: 20px;
     font-family: "Roboto";
     color: @blue;
+    &:visited{
+      color: @blue;
+    }
   }
 
   // content
@@ -2731,10 +2742,19 @@ svg {
   &__prev{
     transform: rotate(-135deg);
     left: -55px;
+    &:hover{
+      border-top: 3px solid @blue;
+      border-right: 3px solid @blue;
+    }
   }
   &__next{
     right: -50px; 
+    &:hover{
+      border-top: 3px solid @blue;
+      border-right: 3px solid @blue;
+    }
   }
+ 
 }
 .d_popapDivH{
   width: 300px;
@@ -2811,6 +2831,12 @@ height: 54vh;
       background-color: @blue;
       color:#fff;
       font-weight: bold;
+
+    }
+    &:visited{
+      background-color: #fff;
+      color:@blue;
+     
 
     }
   }
