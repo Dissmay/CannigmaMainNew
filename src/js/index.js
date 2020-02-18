@@ -201,7 +201,8 @@ $(function() {
     let content = $(link);
     content.addClass("active");
     $(window).scrollTop(110);
-    $('body').css('overflowY', 'hidden')
+    $('body').css('overflowY', 'hidden');
+    $('.d_popapListHuman')[0].style.top = "44px";
     // console.log($(wi));
   
     
@@ -339,7 +340,8 @@ $(function() {
     let content = $(link);
     content.addClass("active");
     $(window).scrollTop(110);
-    $('body').css('overflowY', 'hidden')
+    $('body').css('overflowY', 'hidden');
+    $('.d_popapListHuman')[0].style.top = "44px";
     $('.d_experts__h')[1].innerText = target.attr('data-btnText');
 
     let dataIdImg = $(".d_popapSliderImg__img");
