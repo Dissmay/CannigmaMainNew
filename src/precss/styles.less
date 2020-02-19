@@ -500,13 +500,17 @@ svg {
 .d_human {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+ 
   margin-bottom: 30px;
   .media(1024px, {flex-direction: column;});
+  .media(576px,{
+    margin-top: 18px;
+  });
 
   &__blockNews {
     padding-left: 14px;
     padding-right: 14px;
+    background-color: #F7F7F7;
 
     .size(4.1);
     .media(1024px, {
@@ -524,9 +528,12 @@ svg {
       padding: 0;
     });
     &_h {
+      
       font-style: 30px;
       font-weight: bold;
-      padding-bottom: 20px;
+      
+      padding-top: 25px;
+      padding-left: 12px;
       color: @blue;
       .media(1024px, {
         display: none;
@@ -543,7 +550,7 @@ svg {
   &__news {
     display: flex;
     flex-direction: column;
-    background-color: #F7F7F7;
+  
     padding-left: 14px;
     padding-right: 14px; 
     padding-top: 30px; 
@@ -583,12 +590,16 @@ svg {
     }
     &_h {
       margin-left: 12px;
+      color:@blue;
     }
     &_textBlock {
       &__p {
         font-family: "Roboto";
         font-size: 20px;
         line-height: 30px;
+         & span{
+         background-color: #E7F7F5;
+         }
       }
     }
 
@@ -1994,6 +2005,7 @@ svg {
   }
   &__h {
     margin-left: 12px;
+    color:@blue;
   }
   &__slider {
     position: relative;
@@ -2108,6 +2120,7 @@ svg {
   }
   &__h {
     margin-left: 12px;
+    color:@blue;
   }
 }
 .d_sliderFirst {
@@ -2516,6 +2529,7 @@ svg {
   }
   &__h {
     margin-left: 12px;
+    color: @blue;
   }
 
   &__sliders {

@@ -167,6 +167,7 @@ d_popapVideoHub.on('click', e=>{
     // $('main').style.zIndex= '0';
     $('.d_popapVideo')[0].style.zIndex = '0'
     $('#masthead').removeClass('blurred');
+    $('#colophon').removeClass('blurred');
     
   }
 });
@@ -179,6 +180,7 @@ d_popapVideoHub.on('click', e=>{
     // $('main').style.zIndex= '0';
     $('.d_popapVideo')[0].style.zIndex = '0'
     $('#masthead').removeClass('blurred');
+    $('#colophon').removeClass('blurred');
 
   })
   $('.d_sliderFirst__video_a').on('click',(e)=>{
@@ -189,6 +191,7 @@ d_popapVideoHub.on('click', e=>{
 
     $('.d_popapVideo').removeClass('d-none');
     $('#masthead').addClass('blurred');
+    $('#colophon').addClass('blurred');
 
 
   })
@@ -199,7 +202,7 @@ d_popapVideoHub.on('click', e=>{
     $('.d_popapVideo')[0].style.zIndex = '200'
     $('.d_popapVideo').removeClass('d-none');
     $('#masthead').addClass('blurred');
-
+    $('#colophon').addClass('blurred');
   })
 
   popapListCloser.on("click", e => {
