@@ -121,7 +121,7 @@ $(function() {
   let d_popapVideoHub = $('.d_popapVideo');
   if($(window).height() == 812 ){
       $('.d_popapUlHuman ').map((e,i)=>{
-        $(i)[0].style.height = "65vh"
+        $(i)[0].style.height = "57vh"
         
       })
   }
@@ -218,9 +218,9 @@ d_popapVideoHub.on('click', e=>{
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
-    $(window).scrollTop(110);
+    $(window).scrollTop(0);
     $('body').css('overflowY', 'hidden');
-    $('.d_popapListHuman')[0].style.top = "44px";
+    $('.d_popapListHuman')[0].style.top = "108px";
     // console.log($(wi));
   
     
@@ -357,9 +357,9 @@ d_popapVideoHub.on('click', e=>{
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
-    $(window).scrollTop(110);
+    $(window).scrollTop(0);
     $('body').css('overflowY', 'hidden');
-    $('.d_popapListHuman')[0].style.top = "44px";
+    $('.d_popapListHuman')[0].style.top = "108px";
     $('.d_experts__h')[1].innerText = target.attr('data-btnText');
 
     let dataIdImg = $(".d_popapSliderImg__img");
