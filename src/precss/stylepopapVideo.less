@@ -5,25 +5,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    
   }
   .d_popapVideo {
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-  
+    
     &__closer {
       position: absolute;
-      top: 0;
-      position: absolute;
-      top: 35px;
-      right: 25px;
+      top: 200px;
+      right: 55px;
       width: 40px;
       height: 40px;
       background-color: transparent;
       border: none;
-     
+     .media(420px,{
+       right:25px;
+     });
   
       &:before,
       &:after {
@@ -48,7 +50,9 @@
     width: 77%;
     z-index: 1000;
     .media(567px, {width: 100%;});
+ 
   }
+
   .d_modal-video__width {
     width: 100%;
     padding: 67px 100px;
