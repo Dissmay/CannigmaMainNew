@@ -639,8 +639,10 @@ img {
         display: block;
       }
       &__backImgGirl{
+        width: 171px;
+        height: 583px;
         .media(576px,{
-          width: 125px;
+          width: 133px;
           height: 428px;
         });
       }
@@ -653,15 +655,17 @@ img {
       }
       &__arrowHeart {
         position: absolute;
-        margin-top: 40px;
-        margin-left: -100px;
+        margin-top: 49px;
+        margin-left: -65px;
+        height: 94px;
         .media(576px,{
           display: none;
         });
         &_man {
           position: absolute;
-          margin-top: 40px;
-          margin-left: -100px;
+          margin-top: 50px;
+          margin-left: -71px;
+          height: 112px;
           .media(576px,{
             display: none;
           });
@@ -692,57 +696,66 @@ img {
       &__elipsHead {
         // top: 120px;
         // right: 67%;
-        margin-left: -120px;
-        margin-top: 14px;
+        margin-left: -95px;
+        margin-top: 30px;
         .media(576px,{
-          margin-left: -93px;
+          margin-left: -77px;
           margin-top: 5px;
         });
       }
       &__elipsHeart {
-        margin-left: -100px;
-        margin-top: 164px;
+        margin-left: -74px;
+        margin-top: 133px;
         .media(576px,{
-            margin-left: -65px;
-            margin-top: 111px;
+            margin-left: -59px;
+            margin-top: 96px;
         });
       }
       &__elipsArmLeft {
         margin-left: -155px;
-        margin-top: 174px;
+        margin-top: 190px;
         .media(576px,{
-          margin-left: -115px;
-            margin-top: 141px;
+          margin-left: -124px;
+            margin-top: 136px;
         });
       }
       &__elipsArmRight {
-        margin-left: -32px;
-        margin-top: 174px;
+        margin-left: -38px;
+        margin-top: 191px;
         .media(576px,{
-            margin-top: 141px;
+            margin-top: 133px;
+            margin-left: -32px;
+        });
+      }
+      &__elipsBelly{
+        margin-left: -89px;
+        margin-top: 196px;
+        .media(576px,{
+          margin-left: -73px;
+            margin-top: 149px;
         });
       }
       &__elipsStomach {
-        margin-left: -110px;
-        margin-top: 234px;
+        margin-left: -94px;
+        margin-top: 254px;
         .media(576px,{
-          margin-left: -87px;
+          margin-left: -76px;
           margin-top: 187px;
         });
       }
       &__elipsLegsLeft {
-        margin-left: -130px;
-        margin-top: 390px;
+        margin-left: -128px;
+        margin-top: 393px;
         .media(576px,{
-          margin-left: -97px;
+          margin-left: -102px;
     margin-top: 285px;
         });
       }
       &__elipsLegsRight {
-        margin-left: -90px;
-        margin-top: 390px;
+        margin-left: -70px;
+        margin-top: 393px;
         .media(576px,{
-          margin-left: -64px;
+          margin-left: -58px;
     margin-top: 285px;
         });
         
@@ -754,8 +767,10 @@ img {
         display: block;
       }
       &__backImgMan{
+        width: 187px;
+        height: 583px;  
         .media(576px,{
-          width: 125px;
+          width: 143px;
           height: 428px;
         });
       }
@@ -803,32 +818,64 @@ img {
       &__elipsHead {
         // top: 120px;
         // right: 67%;
-        margin-left: -120px;
-        margin-top: 14px;
+        margin-left: -94px;
+        margin-top: 31px;
+        .media(576px,{
+          margin-left: -80px;
+          margin-top: 8px;
+        });
       }
       &__elipsHeart {
-        margin-left: -100px;
-        margin-top: 164px;
+        margin-left: -77px;
+        margin-top: 150px;
+        .media(576px,{
+          margin-left: -67px;
+          margin-top: 104px;
+        });
       }
       &__elipsArmLeft {
-        margin-left: -155px;
-        margin-top: 174px;
-      }
+        margin-left: -158px;
+        margin-top: 199px;
+        .media(576px,{
+          margin-left: -131px;
+          margin-top: 149px;
+        });
+      } 
       &__elipsArmRight {
         margin-left: -32px;
-        margin-top: 174px;
+        margin-top: 199px;
+        .media(576px,{
+          margin-left: -32px;
+          margin-top: 150px;
+        });
+      }
+      &__elipsBelly{
+        margin-left: -97px;
+        margin-top: 229px;
+        .media(576px,{
+          margin-left: -79px;
+          margin-top: 173px;
+        });
       }
       &__elipsStomach {
         margin-left: -110px;
         margin-top: 234px;
       }
       &__elipsLegsLeft {
-        margin-left: -130px;
+        margin-left: -127px;
         margin-top: 390px;
+        .media(576px,{
+          margin-left: -103px;
+          margin-top: 297px;
+        });
       }
       &__elipsLegsRight {
-        margin-left: -90px;
+        margin-left: -67px;
         margin-top: 390px;
+        .media(576px,{  
+          margin-left: -54px;
+          margin-top: 297px;
+        });
       }
     }
     &_changeGender {
@@ -1081,9 +1128,7 @@ img {
       color: @blue;
       margin-bottom: 10px;
       position: relative;
-      &:hover{
-        color: red;
-       }
+    
       &__a{
         position: absolute;
         top: 0;
@@ -1112,7 +1157,9 @@ img {
         display: block;
       }
     });
-      
+    & .slick-dots li{
+      margin: 0 2px;
+    }
     & .slick-dots {
       height: 60px;
     

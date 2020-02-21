@@ -118,114 +118,105 @@ $(function() {
   let popapListCloser = $(".d_popapListHuman__closerBtn");
   let popapListPrevbtn = $(".d_popapSliderBtn__prev");
   let popapListNextbtn = $(".d_popapSliderBtn__next");
-  let d_popapVideoHub = $('.d_popapVideo');
-  if($(window).height() == 812 ){
-      $('.d_popapUlHuman ').map((e,i)=>{
-        $(i)[0].style.height = "57vh"
-        
-      })
+  let d_popapVideoHub = $(".d_popapVideo");
+  if ($(window).height() == 812) {
+    $(".d_popapUlHuman ").map((e, i) => {
+      $(i)[0].style.height = "57vh";
+    });
   }
-  $(window).on('scroll', e =>{
+  $(window).on("scroll", e => {
     let target = $(e.target);
     let scrolledPixels = target.scrollTop();
-   if(scrolledPixels >= 108){
-     $('.d_popapListHuman')[0].style.top = "44px";
-    //  $('.d_popapUlHuman.active')[0].style.height = '67vh';
-    // console.log($('.d_popapUlHuman.active '));
-
-   }else{
-    $('.d_popapListHuman')[0].style.top = "109px";
-    // $('.d_popapUlHuman.active')[0].style.height = '54vh';
-   }
-
+    if (scrolledPixels >= 108) {
+      $(".d_popapListHuman")[0].style.top = "44px";
+      //  $('.d_popapUlHuman.active')[0].style.height = '67vh';
+      // console.log($('.d_popapUlHuman.active '));
+    } else {
+      $(".d_popapListHuman")[0].style.top = "109px";
+      // $('.d_popapUlHuman.active')[0].style.height = '54vh';
+    }
   });
 
-  $('.d_slideFirst').on('click', e=>{
-      let target = $(e.target);
-   
-      let linkIframe = target.attr('data-srcVideo')
-     let srcLink = $('.d_modal-video__height').children().attr('src', linkIframe )
-      
-      
-      
-  });
-  $('.d_sliderLast__video').on('click', e=>{
+  $(".d_slideFirst").on("click", e => {
     let target = $(e.target);
- 
-    let linkIframe = target.attr('data-srcVideo')
-   let srcLink = $('.d_modal-video__height').children().attr('src', linkIframe )
-    
-    
-    
-});
 
-d_popapVideoHub.on('click', e=>{
-  if(e.target !== $('.d_modal-video__height')){
-    $('.d_popapVideo').addClass('d-none');
-  
-    $('main').removeClass('d_blur');
+    let linkIframe = target.attr("data-srcVideo");
+    let srcLink = $(".d_modal-video__height")
+      .children()
+      .attr("src", linkIframe);
+  });
+  $(".d_sliderLast__video").on("click", e => {
+    let target = $(e.target);
+
+    let linkIframe = target.attr("data-srcVideo");
+    let srcLink = $(".d_modal-video__height")
+      .children()
+      .attr("src", linkIframe);
+  });
+
+  d_popapVideoHub.on("click", e => {
+    if (e.target !== $(".d_modal-video__height")) {
+      $(".d_popapVideo").addClass("d-none");
+
+      $("main").removeClass("d_blur");
+      // $('main').style.zIndex= '0';
+      $(".d_popapVideo")[0].style.zIndex = "0";
+      $("#masthead").removeClass("blurred");
+      $("#colophon").removeClass("blurred");
+    }
+  });
+
+  let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
+  d_btnCloserPopapVideoHub.on("click", () => {
+    $(".d_popapVideo").addClass("d-none");
+
+    $("main").removeClass("d_blur");
     // $('main').style.zIndex= '0';
-    $('.d_popapVideo')[0].style.zIndex = '0'
-    $('#masthead').removeClass('blurred');
-    $('#colophon').removeClass('blurred');
-    
-  }
-});
-  
-  let d_btnCloserPopapVideoHub = $('.d_popapVideo__closer');
-  d_btnCloserPopapVideoHub.on('click', ()=>{
-    $('.d_popapVideo').addClass('d-none');
-    
-    $('main').removeClass('d_blur');
-    // $('main').style.zIndex= '0';
-    $('.d_popapVideo')[0].style.zIndex = '0'
-    $('#masthead').removeClass('blurred');
-    $('#colophon').removeClass('blurred');
-
-  })
-  $('.d_sliderFirst__video_a').on('click',(e)=>{
+    $(".d_popapVideo")[0].style.zIndex = "0";
+    $("#masthead").removeClass("blurred");
+    $("#colophon").removeClass("blurred");
+  });
+  $(".d_sliderFirst__video_a").on("click", e => {
     e.preventDefault();
-    $('main').addClass('d_blur');
+    $("main").addClass("d_blur");
     // $('main').style.zIndex= '100';
-    $('.d_popapVideo')[0].style.zIndex = '200'
+    $(".d_popapVideo")[0].style.zIndex = "200";
 
-    $('.d_popapVideo').removeClass('d-none');
-    $('#masthead').addClass('blurred');
-    $('#colophon').addClass('blurred');
-
-
-  })
-  $('.d_sliderLast__video_a').on('click',(e)=>{
+    $(".d_popapVideo").removeClass("d-none");
+    $("#masthead").addClass("blurred");
+    $("#colophon").addClass("blurred");
+  });
+  $(".d_sliderLast__video_a").on("click", e => {
     e.preventDefault();
-    $('main').addClass('d_blur');
+    $("main").addClass("d_blur");
     // $('main').style.zIndex= '100';
-    $('.d_popapVideo')[0].style.zIndex = '200'
-    $('.d_popapVideo').removeClass('d-none');
-    $('#masthead').addClass('blurred');
-    $('#colophon').addClass('blurred');
-  })
+    $(".d_popapVideo")[0].style.zIndex = "200";
+    $(".d_popapVideo").removeClass("d-none");
+    $("#masthead").addClass("blurred");
+    $("#colophon").addClass("blurred");
+  });
 
   popapListCloser.on("click", e => {
     $(".d_popapListHuman").addClass("d-n");
     $(".d_popapUlHuman").removeClass("active");
     $(".d_popapSliderImg__img").removeClass("active");
     let dataIdImg = $(".d_popapSliderImg__img");
-    $('body').css('overflowY', 'auto')
+    $("body").css("overflowY", "auto");
   });
   let copyDataImg = null;
   openPopapListBtnWoman.on("click", e => {
     let target = $(e.target);
     let link = target.attr("href");
     let content = $(link);
+    console.log(content);
+    
     content.addClass("active");
     $(window).scrollTop(0);
-    $('body').css('overflowY', 'hidden');
-    $('.d_popapListHuman')[0].style.top = "108px";
+    $("body").css("overflowY", "hidden");
+    $(".d_popapListHuman")[0].style.top = "108px";
     // console.log($(wi));
-  
-    
-    
-    $('.d_experts__h')[1].innerText = target.attr('data-btnText');
+
+    $(".d_experts__h")[1].innerText = target.attr("data-btnText");
     $(".d_popapListHuman").removeClass("d-n");
 
     let listImg = $(".d_popapSliderImg").children();
@@ -240,8 +231,7 @@ d_popapVideoHub.on('click', e=>{
       });
       let activeUl = $(activeElip).attr("href");
       let contentUl = $(activeUl);
-
-      if ($(elem).attr("data-id") == contentUl.attr("id")) {
+        if ($(elem).attr("data-id") == contentUl.attr("id")) {
         $(elem).addClass("active");
       }
     });
@@ -291,11 +281,10 @@ d_popapVideoHub.on('click', e=>{
 
       $(e).removeClass("active");
     });
-    let dataText = $(filteredList[ind]).attr('data-Text');
-    
-    $('.d_experts__h')[1].innerText = dataText;
-    
-    
+    let dataText = $(filteredList[ind]).attr("data-Text");
+
+    $(".d_experts__h")[1].innerText = dataText;
+
     $(filteredList[ind]).addClass("active");
   });
   popapListPrevbtn.on("click", e => {
@@ -318,10 +307,9 @@ d_popapVideoHub.on('click', e=>{
       }
       $(e).removeClass("active");
     });
-   
+
     $(filteredListUl[indUl]).addClass("active");
-    
-    
+
     let ind = null;
     const filteredList = slider.filter((i, e) => {
       return !$(e).hasClass("d-n");
@@ -346,9 +334,9 @@ d_popapVideoHub.on('click', e=>{
     });
 
     $(filteredList[ind]).addClass("active");
-    let dataText = $(filteredList[ind]).attr('data-Text');
-    
-    $('.d_experts__h')[1].innerText = dataText; 
+    let dataText = $(filteredList[ind]).attr("data-Text");
+
+    $(".d_experts__h")[1].innerText = dataText;
   });
   let newDataIdImg = null;
 
@@ -358,9 +346,9 @@ d_popapVideoHub.on('click', e=>{
     let content = $(link);
     content.addClass("active");
     $(window).scrollTop(0);
-    $('body').css('overflowY', 'hidden');
-    $('.d_popapListHuman')[0].style.top = "108px";
-    $('.d_experts__h')[1].innerText = target.attr('data-btnText');
+    $("body").css("overflowY", "hidden");
+    $(".d_popapListHuman")[0].style.top = "108px";
+    $(".d_experts__h")[1].innerText = target.attr("data-btnText");
 
     let dataIdImg = $(".d_popapSliderImg__img");
 
@@ -404,7 +392,7 @@ d_popapVideoHub.on('click', e=>{
     target.parent().addClass("active");
     content.addClass("active");
   });
- 
+
   /* Tabs */
   let getImgHuman = id => {
     humanImgHeart.map((curValue, index) => {
@@ -434,28 +422,28 @@ d_popapVideoHub.on('click', e=>{
   let switchFunc = id => {
     switch (id) {
       case "0":
-        arrowHeart[0].style.marginTop = "-31px";
-        arrowHeart[0].style.marginLeft = "-102px";
-        arrowHeart[0].style.transform = "rotate(37deg)";
-        arrowHeart[0].style.height = "90px";
+        arrowHeart[0].style.marginTop = "-11px";
+        arrowHeart[0].style.marginLeft = "-86px";
+        arrowHeart[0].style.transform = "rotate(28deg)";
+        arrowHeart[0].style.height = "77px";
         break;
       case "1":
-        arrowHeart[0].style.marginTop = "40px";
-        arrowHeart[0].style.marginLeft = "-100px";
+        arrowHeart[0].style.marginTop = "48px";
+        arrowHeart[0].style.marginLeft = "-61px";
         arrowHeart[0].style.transform = "rotate(1deg)";
-        arrowHeart[0].style.height = "140px";
+        arrowHeart[0].style.height = "96px";
         break;
       case "2":
         arrowHeart[0].style.marginTop = "25px";
         arrowHeart[0].style.marginLeft = "-148px";
-        arrowHeart[0].style.transform = "rotate(9deg)";
+        arrowHeart[0].style.transform = "rotate(0deg)";
         arrowHeart[0].style.height = "172px";
         break;
       case "3":
         arrowHeart[0].style.marginTop = "72px";
         arrowHeart[0].style.marginLeft = "-41px";
-        arrowHeart[0].style.transform = "rotate(-14deg)";
-        arrowHeart[0].style.height = "107px";
+        arrowHeart[0].style.transform = "rotate(-16deg)";
+        arrowHeart[0].style.height = "110px";
         break;
       case "4":
         arrowHeart[0].style.marginTop = "60px";
@@ -464,55 +452,67 @@ d_popapVideoHub.on('click', e=>{
         arrowHeart[0].style.height = "171px";
         break;
       case "5":
-        arrowHeart[0].style.marginTop = "79px";
-        arrowHeart[0].style.marginLeft = "-184px";
-        arrowHeart[0].style.transform = "rotate(-16deg)";
-        arrowHeart[0].style.height = "287px";
+        arrowHeart[0].style.marginTop = "63px";
+        arrowHeart[0].style.marginLeft = "-122px";
+        arrowHeart[0].style.transform = "rotate(-15deg)";
+        arrowHeart[0].style.height = "187px";
         break;
       case "6":
+        arrowHeart[0].style.marginTop = "79px";
+        arrowHeart[0].style.marginLeft = "-184px";
+        arrowHeart[0].style.transform = "rotate(-17deg)";
+        arrowHeart[0].style.height = "301px";
+        break;
+      case "7":
         arrowHeart[0].style.marginTop = "89px";
         arrowHeart[0].style.marginLeft = "-149px";
-        arrowHeart[0].style.transform = "rotate(-18deg)";
-        arrowHeart[0].style.height = "277px";
+        arrowHeart[0].style.transform = "rotate(-25deg)";
+        arrowHeart[0].style.height = "285px";
     }
   };
   let switchFuncMan = id => {
     switch (id) {
       case "0":
-        arrowHeartMan[0].style.marginTop = "-31px";
-        arrowHeartMan[0].style.marginLeft = "-102px";
+        arrowHeartMan[0].style.marginTop = "-2px";
+        arrowHeartMan[0].style.marginLeft = "-79px";
         arrowHeartMan[0].style.transform = "rotate(37deg)";
-        arrowHeartMan[0].style.height = "90px";
+        arrowHeartMan[0].style.height = "70px";
         break;
       case "1":
-        arrowHeartMan[0].style.marginTop = "40px";
-        arrowHeartMan[0].style.marginLeft = "-100px";
-        arrowHeartMan[0].style.transform = "rotate(1deg)";
-        arrowHeartMan[0].style.height = "140px";
+        arrowHeartMan[0].style.marginTop = "52px";
+        arrowHeartMan[0].style.marginLeft = "-82px";
+        arrowHeartMan[0].style.transform = "rotate(-4deg)";
+        arrowHeartMan[0].style.height = "117px";
         break;
       case "2":
-        arrowHeartMan[0].style.marginTop = "25px";
-        arrowHeartMan[0].style.marginLeft = "-148px";
-        arrowHeartMan[0].style.transform = "rotate(9deg)";
-        arrowHeartMan[0].style.height = "172px";
+        arrowHeartMan[0].style.marginTop = "42px";
+        arrowHeartMan[0].style.marginLeft = "-147px";
+        arrowHeartMan[0].style.transform = "rotate(5deg)";
+        arrowHeartMan[0].style.height = "176px";
         break;
       case "3":
         arrowHeartMan[0].style.marginTop = "72px";
         arrowHeartMan[0].style.marginLeft = "-41px";
+        arrowHeartMan[0].style.transform = "rotate(-11deg)";
+        arrowHeartMan[0].style.height = "126px";
+        break;
+      case "4":
+        arrowHeartMan[0].style.marginTop = "60px";
+        arrowHeartMan[0].style.marginLeft = "-114px";
         arrowHeartMan[0].style.transform = "rotate(-14deg)";
-        arrowHeartMan[0].style.height = "107px";
+        arrowHeartMan[0].style.height = "171px";
         break;
 
-      case "4":
+      case "5":
         arrowHeartMan[0].style.marginTop = "79px";
         arrowHeartMan[0].style.marginLeft = "-184px";
-        arrowHeartMan[0].style.transform = "rotate(-16deg)";
+        arrowHeartMan[0].style.transform = "rotate(-18deg)";
         arrowHeartMan[0].style.height = "287px";
         break;
-      case "5":
+      case "6":
         arrowHeartMan[0].style.marginTop = "89px";
         arrowHeartMan[0].style.marginLeft = "-149px";
-        arrowHeartMan[0].style.transform = "rotate(-18deg)";
+        arrowHeartMan[0].style.transform = "rotate(-27deg)";
         arrowHeartMan[0].style.height = "277px";
     }
   };
@@ -527,8 +527,10 @@ d_popapVideoHub.on('click', e=>{
   elipsYellowMan.map((e, target) => {
     massElipsColorMan.push(target);
   });
-  $('.d_human__list__h')[0].innerText = $(massElipsColor)[1].getAttribute('data-Text')
-  
+  $(".d_human__list__h")[0].innerText = $(massElipsColor)[1].getAttribute(
+    "data-Text"
+  );
+
   // mouseover MOUSEOVER
   let dMobailDotsWoman = $(slidersGirl)
     .find(".slick-dots")
@@ -538,8 +540,8 @@ d_popapVideoHub.on('click', e=>{
     let target = $(e.target);
     arrowHeartMan[0].style.opacity = "0";
     arrowHeart[0].style.opacity = "1";
-    
-     $('.d_human__list__h')[0].innerText = target[0].getAttribute('data-Text')
+
+    $(".d_human__list__h")[0].innerText = target[0].getAttribute("data-Text");
     ulActive.map((index, ul) => {
       ul.classList.remove("active");
     });
@@ -569,9 +571,9 @@ d_popapVideoHub.on('click', e=>{
     let target = $(e.target);
     arrowHeartMan[0].style.opacity = "1";
     arrowHeart[0].style.opacity = "0";
-    
-    $('.d_human__list__h')[0].innerText = target[0].getAttribute('data-Text')
-    
+
+    $(".d_human__list__h")[0].innerText = target[0].getAttribute("data-Text");
+
     Array.prototype.forEach.call(ulActive, ul => {
       ul.classList.remove("active");
     });
@@ -620,23 +622,23 @@ d_popapVideoHub.on('click', e=>{
       }
     });
     let dataId = String(Number(value.getAttribute("data-id")) + 1);
-    
-    
-   
+
     massElipsColor.forEach((curValue, index, array) => {
       curValue.classList.remove("active");
-      
-      
-      // 
+
+      //
       if (index == dataId) {
         curValue.classList.add("active");
-      
-       $('.d_human__list__h')[0].innerText = $(curValue)[0].getAttribute('data-Text')
+
+        $(".d_human__list__h")[0].innerText = $(curValue)[0].getAttribute(
+          "data-Text"
+        );
       }
       if (dataId >= array.length) {
         massElipsColor[0].classList.add("active");
-        $('.d_human__list__h')[0].innerText = massElipsColor[0].getAttribute('data-Text')
-       
+        $(".d_human__list__h")[0].innerText = massElipsColor[0].getAttribute(
+          "data-Text"
+        );
       }
     });
     let datId =
@@ -669,11 +671,15 @@ d_popapVideoHub.on('click', e=>{
       curValue.classList.remove("active");
       if (index == dataId) {
         curValue.classList.add("active");
-        $('.d_human__list__h')[0].innerText = $(curValue)[0].getAttribute('data-Text')
+        $(".d_human__list__h")[0].innerText = $(curValue)[0].getAttribute(
+          "data-Text"
+        );
       }
       if (dataId >= array.length) {
         massElipsColorMan[0].classList.add("active");
-        $('.d_human__list__h')[0].innerText = massElipsColorMan[0].getAttribute('data-Text')
+        $(".d_human__list__h")[0].innerText = massElipsColorMan[0].getAttribute(
+          "data-Text"
+        );
       }
     });
 
@@ -710,11 +716,12 @@ d_popapVideoHub.on('click', e=>{
 
     massElipsColor.forEach((curValue, index) => {
       curValue.classList.remove("active");
-      
 
       if (index == dataId) {
         curValue.classList.add("active");
-        $('.d_human__list__h')[0].innerText = $(curValue)[0].getAttribute('data-Text')
+        $(".d_human__list__h")[0].innerText = $(curValue)[0].getAttribute(
+          "data-Text"
+        );
       }
     });
     switchFunc(dataId);
@@ -745,7 +752,9 @@ d_popapVideoHub.on('click', e=>{
 
       if (index == dataId) {
         curValue.classList.add("active");
-        $('.d_human__list__h')[0].innerText = $(curValue)[0].getAttribute('data-Text')
+        $(".d_human__list__h")[0].innerText = $(curValue)[0].getAttribute(
+          "data-Text"
+        );
       }
     });
     switchFuncMan(dataId);
@@ -783,36 +792,38 @@ d_popapVideoHub.on('click', e=>{
     Array.prototype.forEach.call($(children), (e, n) => {
       if (e.parentNode.getAttribute("id") == "blockGirl") {
         findAttr();
-        let activeElips = document.querySelector('.d_human__img_girl__elips.active');
-        getImgHuman($(activeElips)[0].getAttribute('data-id'));
-        $('.d_human__list__h')[0].innerText = $(activeElips)[0].getAttribute('data-Text')
+        let activeElips = document.querySelector(
+          ".d_human__img_girl__elips.active"
+        );
+        getImgHuman($(activeElips)[0].getAttribute("data-id"));
+        $(".d_human__list__h")[0].innerText = $(activeElips)[0].getAttribute(
+          "data-Text"
+        );
 
-        
-       
-        
         arrowHeartMan[0].style.opacity = "0";
         arrowHeart[0].style.opacity = "1";
         let dnblockUl = $(".d_popapUlHuman");
-        $(dnblockUl[3]).removeClass("d-n");
+        $(dnblockUl[4]).removeClass("d-n");
         let dnblockImg = $(".d_popapSliderImg__img");
-        $(dnblockImg[3]).removeClass("d-n");
+        $(dnblockImg[4]).removeClass("d-n");
       }
       if (e.parentNode.getAttribute("id") == "blockMan") {
-        
         findAttrMan();
-        let activeElipsTwo = document.querySelector('.d_human__img_man__elips.active');
-        
-        
-        getImgHuman($(activeElipsTwo)[0].getAttribute('data-id'));
-        $('.d_human__list__h')[0].innerText = $(activeElipsTwo)[0].getAttribute('data-Text')
-        
-       
+        let activeElipsTwo = document.querySelector(
+          ".d_human__img_man__elips.active"
+        );
+
+        getImgHuman($(activeElipsTwo)[0].getAttribute("data-id"));
+        $(".d_human__list__h")[0].innerText = $(activeElipsTwo)[0].getAttribute(
+          "data-Text"
+        );
+
         arrowHeart[0].style.opacity = "0";
         arrowHeartMan[0].style.opacity = "1";
         let dnblockUl = $(".d_popapUlHuman");
-        $(dnblockUl[3]).addClass("d-n");
+        $(dnblockUl[4]).addClass("d-n");
         let dnblockImg = $(".d_popapSliderImg__img");
-        $(dnblockImg[3]).addClass("d-n");
+        $(dnblockImg[4]).addClass("d-n");
       }
     });
     content.addClass("active");
@@ -823,13 +834,11 @@ d_popapVideoHub.on('click', e=>{
       $(slidersGirl).addClass("active");
       $(slidersMan).removeClass("active");
       $(".d_human__slidersMan").slick("unslick");
-      
     } else {
       manBtns[0].classList.add("active");
       girlBtns[0].classList.remove("active");
       $(slidersMan).addClass("active");
       $(slidersGirl).removeClass("active");
-      
 
       if (document.documentElement.clientWidth <= 577) {
         $(".d_human__slidersMan").slick({
