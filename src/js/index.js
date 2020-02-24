@@ -208,7 +208,7 @@ $(function() {
     let target = $(e.target);
     let link = target.attr("href");
     let content = $(link);
-    console.log(content);
+    
     
     content.addClass("active");
     $(window).scrollTop(0);
