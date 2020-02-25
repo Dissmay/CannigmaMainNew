@@ -124,16 +124,16 @@ $(function() {
       $(i)[0].style.height = "57vh";
     });
   }
+ $(window).scrollTop(0)
+
+
   $(window).on("scroll", e => {
     let target = $(e.target);
     let scrolledPixels = target.scrollTop();
     if (scrolledPixels >= 108) {
       $(".d_popapListHuman")[0].style.top = "44px";
-      //  $('.d_popapUlHuman.active')[0].style.height = '67vh';
-      // console.log($('.d_popapUlHuman.active '));
     } else {
       $(".d_popapListHuman")[0].style.top = "109px";
-      // $('.d_popapUlHuman.active')[0].style.height = '54vh';
     }
   });
 
@@ -208,7 +208,6 @@ $(function() {
     let target = $(e.target);
     let link = target.attr("href");
     let content = $(link);
-    
     
     content.addClass("active");
     $(window).scrollTop(0);
@@ -447,9 +446,9 @@ $(function() {
         break;
       case "4":
         arrowHeart[0].style.marginTop = "60px";
-        arrowHeart[0].style.marginLeft = "-114px";
+        arrowHeart[0].style.marginLeft = "-89px";
         arrowHeart[0].style.transform = "rotate(-7deg)";
-        arrowHeart[0].style.height = "171px";
+        arrowHeart[0].style.height = "139px";
         break;
       case "5":
         arrowHeart[0].style.marginTop = "63px";
@@ -460,7 +459,7 @@ $(function() {
       case "6":
         arrowHeart[0].style.marginTop = "79px";
         arrowHeart[0].style.marginLeft = "-184px";
-        arrowHeart[0].style.transform = "rotate(-17deg)";
+        arrowHeart[0].style.transform = "rotate(-16deg)";
         arrowHeart[0].style.height = "301px";
         break;
       case "7":
@@ -493,13 +492,13 @@ $(function() {
       case "3":
         arrowHeartMan[0].style.marginTop = "72px";
         arrowHeartMan[0].style.marginLeft = "-41px";
-        arrowHeartMan[0].style.transform = "rotate(-11deg)";
+        arrowHeartMan[0].style.transform = "rotate(-9deg)";
         arrowHeartMan[0].style.height = "126px";
         break;
       case "4":
         arrowHeartMan[0].style.marginTop = "60px";
         arrowHeartMan[0].style.marginLeft = "-114px";
-        arrowHeartMan[0].style.transform = "rotate(-14deg)";
+        arrowHeartMan[0].style.transform = "rotate(-11deg)";
         arrowHeartMan[0].style.height = "171px";
         break;
 
