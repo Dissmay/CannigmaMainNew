@@ -120,10 +120,15 @@ $(function() {
   let popapListNextbtn = $(".d_popapSliderBtn__next");
   let d_popapVideoHub = $(".d_popapVideo");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
+  
+  //SUBSTRTEXT
   const expertsComments = document.querySelectorAll(
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
+  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  console.log(smallCardMoreNews);
+  
   const endCharacter = "...";
 
   let substrFunction = (element, size) => {
@@ -136,9 +141,12 @@ $(function() {
       }
     });
   };
+
   substrFunction(expertsComments, 100);
   substrFunction(expertsName, 18);
- 
+  substrFunction(smallCardMoreNews, 20);
+
+ //SUBSTRTEXT
   $(window).scrollTop(0);
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
