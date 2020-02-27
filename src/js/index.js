@@ -119,13 +119,40 @@ $(function() {
   let popapListPrevbtn = $(".d_popapSliderBtn__prev");
   let popapListNextbtn = $(".d_popapSliderBtn__next");
   let d_popapVideoHub = $(".d_popapVideo");
+  let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
+  const expertsComments = document.querySelectorAll(".d_experts__sliderExpert_p");
+  const expertsName = document.querySelectorAll('.d_experts__sliderExpert_h');
+  const slidersMainText = document.querySelectorAll('.d_sliderLast__video_h');
+  const endCharacter = '...';                                  
+ 
+   
+  let substrFunction = (element, size) => {
+    element.forEach(el => {
+      let text = el.innerHTML;
+      
+      if (el.innerHTML.length > size) {
+        text = text.substr(0, size);
+        el.innerHTML = text + endCharacter;
+      }
+    });
+  };
+
+  
+ 
+  substrFunction(expertsComments, 100);
+  substrFunction(expertsName, 18);
+    
+
   if ($(window).height() == 812) {
     $(".d_popapUlHuman ").map((e, i) => {
       $(i)[0].style.height = "57vh";
     });
   }
  $(window).scrollTop(0)
-
+if( $(window).height() == 667){
+  console.log(d_btnCloserPopapVideoHub[0].style.top = '149px');
+  
+}
 
   $(window).on("scroll", e => {
     let target = $(e.target);
@@ -166,7 +193,6 @@ $(function() {
     }
   });
 
-  let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
   d_btnCloserPopapVideoHub.on("click", () => {
     $(".d_popapVideo").addClass("d-none");
 
