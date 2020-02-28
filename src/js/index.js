@@ -149,7 +149,7 @@ $(function() {
 
   if($(window).width() <= 420){
     substrFunction(expertsComments, 50);
-    substrFunction(humanListNameA, 37);
+    substrFunction(humanListNameA, 25);
   }
   // substrFunction(smallCardMoreNews, 20);
   
