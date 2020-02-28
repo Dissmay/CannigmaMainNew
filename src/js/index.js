@@ -128,7 +128,6 @@ $(function() {
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
   // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   // console.log(smallCardMoreNews);
-  
   const endCharacter = "...";
 
   let substrFunction = (element, size) => {
@@ -144,8 +143,11 @@ $(function() {
 
   substrFunction(expertsComments, 70);
   substrFunction(expertsName, 15);
+  if($(window).width() <= 420){
+    substrFunction(expertsComments, 50);
+  }
   // substrFunction(smallCardMoreNews, 20);
-
+  
  //SUBSTRTEXT
   $(window).scrollTop(0);
   if ($(window).height() <= 667) {
