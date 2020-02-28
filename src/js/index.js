@@ -142,8 +142,8 @@ $(function() {
     });
   };
 
-  substrFunction(expertsComments, 100);
-  substrFunction(expertsName, 18);
+  substrFunction(expertsComments, 70);
+  substrFunction(expertsName, 15);
   // substrFunction(smallCardMoreNews, 20);
 
  //SUBSTRTEXT
