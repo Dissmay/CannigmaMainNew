@@ -126,7 +126,7 @@ $(function() {
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
-  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   console.log(smallCardMoreNews);
   
   const endCharacter = "...";
@@ -144,7 +144,7 @@ $(function() {
 
   substrFunction(expertsComments, 100);
   substrFunction(expertsName, 18);
-  substrFunction(smallCardMoreNews, 20);
+  // substrFunction(smallCardMoreNews, 20);
 
  //SUBSTRTEXT
   $(window).scrollTop(0);
