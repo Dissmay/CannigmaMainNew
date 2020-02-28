@@ -127,7 +127,7 @@ $(function() {
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
   // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
-  console.log(smallCardMoreNews);
+  // console.log(smallCardMoreNews);
   
   const endCharacter = "...";
 
