@@ -15,6 +15,7 @@ $(function() {
       .find("li")[1]
       .click();
   });
+  //INIT слайдера
 
   $(".d_slideWrap").slick({
     slidesToShow: 1,
@@ -91,8 +92,10 @@ $(function() {
     dots: true,
     arrows: false
   });
-
   // SLIDERS
+  //GLOBAL WINDOW SCROLL TOP 0
+  $(window).scrollTop(0);
+  //GLOBAL WINDOW SCROLL TOP 0
 
   /* Tabs */
   let d_tabLink = $(".d_essentials__tabLink");
@@ -126,11 +129,10 @@ $(function() {
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
-  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
-  console.log(smallCardMoreNews);
-  
+  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');  
+  const dHumanSliderGirlH = document.querySelectorAll('.d_human__sliderGirl_h');
+  const dHumanSliderManH = document.querySelectorAll('.d_human__sliderMan_h');
   const endCharacter = "...";
-
   let substrFunction = (element, size) => {
     element.forEach(el => {
       let text = el.innerHTML;
@@ -141,13 +143,14 @@ $(function() {
       }
     });
   };
-
+  substrFunction(dHumanSliderGirlH, 30);
+  substrFunction(dHumanSliderManH, 30);
   substrFunction(expertsComments, 100);
   substrFunction(expertsName, 18);
   substrFunction(smallCardMoreNews, 20);
-
  //SUBSTRTEXT
-  $(window).scrollTop(0);
+
+ 
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
