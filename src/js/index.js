@@ -151,6 +151,10 @@ $(function() {
     substrFunction(expertsComments, 50);
     substrFunction(humanListNameA, 25);
   }
+  if($(window).width() <= 375){
+    substrFunction(expertsComments, 40);
+    
+  }
   // substrFunction(smallCardMoreNews, 20);
   
  //SUBSTRTEXT
