@@ -126,6 +126,7 @@ $(function() {
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
+  const humanListNameA = document.querySelectorAll('.d_news__h');
   // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   // console.log(smallCardMoreNews);
   const endCharacter = "...";
@@ -143,8 +144,12 @@ $(function() {
 
   substrFunction(expertsComments, 70);
   substrFunction(expertsName, 15);
+  substrFunction(humanListNameA, 45);
+
+
   if($(window).width() <= 420){
     substrFunction(expertsComments, 50);
+    substrFunction(humanListNameA, 37);
   }
   // substrFunction(smallCardMoreNews, 20);
   
