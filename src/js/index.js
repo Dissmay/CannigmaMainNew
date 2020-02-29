@@ -123,21 +123,15 @@ $(function() {
   let popapListNextbtn = $(".d_popapSliderBtn__next");
   let d_popapVideoHub = $(".d_popapVideo");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
-  
+
   //SUBSTRTEXT
   const expertsComments = document.querySelectorAll(
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
-<<<<<<< HEAD
-  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');  
-  const dHumanSliderGirlH = document.querySelectorAll('.d_human__sliderGirl_h');
-  const dHumanSliderManH = document.querySelectorAll('.d_human__sliderMan_h');
-=======
-  const humanListNameA = document.querySelectorAll('.d_news__h');
+  const humanListNameA = document.querySelectorAll(".d_news__h");
   // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   // console.log(smallCardMoreNews);
->>>>>>> 0e95940ce4573139c7401aecdb0df1a3bbc2596a
   const endCharacter = "...";
   let substrFunction = (element, size) => {
     element.forEach(el => {
@@ -149,33 +143,22 @@ $(function() {
       }
     });
   };
-<<<<<<< HEAD
-  substrFunction(dHumanSliderGirlH, 30);
-  substrFunction(dHumanSliderManH, 30);
-  substrFunction(expertsComments, 100);
-  substrFunction(expertsName, 18);
-  substrFunction(smallCardMoreNews, 20);
-=======
 
   substrFunction(expertsComments, 70);
   substrFunction(expertsName, 15);
   substrFunction(humanListNameA, 45);
 
-
-  if($(window).width() <= 420){
+  if ($(window).width() <= 420) {
     substrFunction(expertsComments, 50);
     substrFunction(humanListNameA, 25);
   }
-  if($(window).width() <= 375){
+  if ($(window).width() <= 375) {
     substrFunction(expertsComments, 40);
-    
   }
   // substrFunction(smallCardMoreNews, 20);
-  
->>>>>>> 0e95940ce4573139c7401aecdb0df1a3bbc2596a
- //SUBSTRTEXT
 
- 
+  //SUBSTRTEXT
+
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
@@ -183,7 +166,6 @@ $(function() {
       event.preventDefault();
       event.target.disabled = true;
     });
-  
   }
 
   $(window).on("scroll", e => {
@@ -942,4 +924,71 @@ $(function() {
     });
     massElipsColorMan[currentSlide].classList.add("active");
   });
+  let orangStroke = document.querySelector("#EllipseOrangStroke");
+  let btnBackToTop = document.querySelector(".d_backToTop");
+  let funcBackToTop = function() {
+    if (scrollTop >= 200) {
+      btnBackToTop.classList.remove("d-n");
+      targetTop = scrollTop + $(window).height();
+    } else {
+      btnBackToTop.classList.add("d-n");
+      targetTop = scrollTop;
+    }
+
+    let BodyHeight = $("body").height();
+    let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
+
+    let resultStokeOrange = (resultProcentBody * -251) / 100;
+    orangStroke.style.strokeDashoffset = resultStokeOrange;
+  };
+  $(btnBackToTop).on("click", e => {
+    let target = $(e.target);
+
+    $("html, body").animate(
+      {
+        scrollTop: $("html, body").offset().top
+      },
+      1000
+    );
+  });
+  let trottled = func => {
+    let isTrottle = false;
+    return function() {
+      if (isTrottle) return;
+      else {
+        let ctx = this;
+
+        let args = arguments;
+
+        func.apply(ctx, args);
+
+        isTrottle = true;
+        setInterval(() => {
+          isTrottle = false;
+        }, 100);
+      }
+    };
+  };
+  $(window).on(
+    "scroll",
+    trottled(e => {
+      let target = $(e.target);
+      let targetTop = null;
+      let scrollTop = $(window).scrollTop();
+
+      if (scrollTop >= 200) {
+        btnBackToTop.classList.remove("d-n");
+        targetTop = scrollTop + $(window).height();
+      } else {
+        btnBackToTop.classList.add("d-n");
+        targetTop = scrollTop;
+      }
+
+      let BodyHeight = $("body").height();
+      let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
+
+      let resultStokeOrange = (resultProcentBody * -251) / 100;
+      orangStroke.style.strokeDashoffset = resultStokeOrange;
+    })
+  );
 });
