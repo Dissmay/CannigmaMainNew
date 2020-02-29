@@ -129,9 +129,15 @@ $(function() {
     ".d_experts__sliderExpert_p"
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
+<<<<<<< HEAD
   const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');  
   const dHumanSliderGirlH = document.querySelectorAll('.d_human__sliderGirl_h');
   const dHumanSliderManH = document.querySelectorAll('.d_human__sliderMan_h');
+=======
+  const humanListNameA = document.querySelectorAll('.d_news__h');
+  // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  // console.log(smallCardMoreNews);
+>>>>>>> 0e95940ce4573139c7401aecdb0df1a3bbc2596a
   const endCharacter = "...";
   let substrFunction = (element, size) => {
     element.forEach(el => {
@@ -143,11 +149,30 @@ $(function() {
       }
     });
   };
+<<<<<<< HEAD
   substrFunction(dHumanSliderGirlH, 30);
   substrFunction(dHumanSliderManH, 30);
   substrFunction(expertsComments, 100);
   substrFunction(expertsName, 18);
   substrFunction(smallCardMoreNews, 20);
+=======
+
+  substrFunction(expertsComments, 70);
+  substrFunction(expertsName, 15);
+  substrFunction(humanListNameA, 45);
+
+
+  if($(window).width() <= 420){
+    substrFunction(expertsComments, 50);
+    substrFunction(humanListNameA, 25);
+  }
+  if($(window).width() <= 375){
+    substrFunction(expertsComments, 40);
+    
+  }
+  // substrFunction(smallCardMoreNews, 20);
+  
+>>>>>>> 0e95940ce4573139c7401aecdb0df1a3bbc2596a
  //SUBSTRTEXT
 
  
