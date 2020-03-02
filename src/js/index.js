@@ -969,12 +969,20 @@ $(function() {
       }
     };
   };
+  let timer;
+
   $(window).on(
     "scroll",
     trottled(e => {
       let target = $(e.target);
       let targetTop = null;
       let scrollTop = $(window).scrollTop();
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function() {
+        btnBackToTop.classList.add("d-n");
+      }, 1000);
 
       if (scrollTop >= 200) {
         btnBackToTop.classList.remove("d-n");
@@ -989,6 +997,11 @@ $(function() {
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
+
+      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+        btnBackToTop.classList.add("remove");
+        clearTimeout(timer);
+      }
     })
   );
 });
