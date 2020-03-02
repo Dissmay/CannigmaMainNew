@@ -1001,8 +1001,11 @@ $(function() {
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
+console.log($(document).height());
 
-      if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+      if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
+      $(document).scrollTop() > ($(document).height() - $(window).height())
+      ) {
         btnBackToTop.classList.remove("d-n");
         clearTimeout(timer);
       }
