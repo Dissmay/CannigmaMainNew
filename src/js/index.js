@@ -1007,7 +1007,7 @@ console.log($(document).height());
       $(document).scrollTop() > ($(document).height() - $(window).height())
       ) {
         btnBackToTop.classList.remove("d-n");
-        clearTimeout(timer);
+        clearTimeout(timer); 
       }
     })
   );
