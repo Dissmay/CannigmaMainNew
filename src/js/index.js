@@ -969,26 +969,45 @@ $(function() {
       }
     };
   };
-  $(window).on(
+  let timer;
+
+  document.addEventListener(
     "scroll",
     trottled(e => {
+    
+     
       let target = $(e.target);
       let targetTop = null;
-      let scrollTop = $(window).scrollTop();
+      let scrollTop = $(document).scrollTop();
+      if (timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function() {
+        btnBackToTop.classList.add("d-n");
+      }, 1000);
 
       if (scrollTop >= 200) {
         btnBackToTop.classList.remove("d-n");
         targetTop = scrollTop + $(window).height();
+     
+
       } else {
         btnBackToTop.classList.add("d-n");
         targetTop = scrollTop;
       }
 
-      let BodyHeight = $("body").height();
+      let BodyHeight = $(document).height();
       let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
+console.log($(window).scrollTop());
+console.log($(document).height() - $(window).height());
+
+      if ($(document).scrollTop() == $(document).height() - $(window).height()) {
+        btnBackToTop.classList.remove("d-n");
+        clearTimeout(timer);
+      }
     })
   );
 });
