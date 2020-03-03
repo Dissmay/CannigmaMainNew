@@ -1001,18 +1001,11 @@ $(function() {
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
-<<<<<<< HEAD
-console.log($(window).scrollTop());
-console.log($(document).height() - $(window).height());
-
-      if ($(document).scrollTop() == $(document).height() - $(window).height()) {
-=======
 console.log($(document).height());
 
       if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
       $(document).scrollTop() > ($(document).height() - $(window).height())
       ) {
->>>>>>> 4f32859ee7174dae4ddab9e159c3e34266615e55
         btnBackToTop.classList.remove("d-n");
         clearTimeout(timer); 
       }
