@@ -926,21 +926,7 @@ $(function() {
   });
   let orangStroke = document.querySelector("#EllipseOrangStroke");
   let btnBackToTop = document.querySelector(".d_backToTop");
-  let funcBackToTop = function() {
-    if (scrollTop >= 200) {
-      btnBackToTop.classList.remove("d-n");
-      targetTop = scrollTop + $(window).height();
-    } else {
-      btnBackToTop.classList.add("d-n");
-      targetTop = scrollTop;
-    }
-
-    let BodyHeight = $("body").height();
-    let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
-
-    let resultStokeOrange = (resultProcentBody * -251) / 100;
-    orangStroke.style.strokeDashoffset = resultStokeOrange;
-  };
+ 
   $(btnBackToTop).on("click", e => {
     let target = $(e.target);
 
@@ -1001,7 +987,7 @@ $(function() {
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
-console.log($(document).height());
+
 
       if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
       $(document).scrollTop() > ($(document).height() - $(window).height())
