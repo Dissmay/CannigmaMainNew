@@ -2110,7 +2110,7 @@ overflow: hidden;
       width: 200px;
       outline: none;
       position: relative;
-      color:#5F5F5F;
+     
       &__a{
         position: absolute;
         top: 0;
@@ -2137,9 +2137,11 @@ overflow: hidden;
         line-height: 30px;
         text-align: center;
         font-size: 30px;
+        
         .media(768px,{
           margin-bottom: 0;
           font-size: 28px;
+          color:@blue;  
           
         });
       }
@@ -2150,6 +2152,11 @@ overflow: hidden;
 
         font-size: 20px;
         font-family: "Roboto";
+        .media(768px,{
+         
+          color:@blue;  
+          
+        });
       }
     }
   }
@@ -2216,10 +2223,15 @@ overflow: hidden;
     padding-bottom: 21px;
     border-bottom: 1px solid @blue;
     margin-bottom: 35px;
+
   }
   &__h {
     margin-left: 12px;
     color:@blue;
+    font-size: 30px;
+    .media(520px,{
+      font-size: 28px;
+    });
   }
 }
 .d_sliderFirst {
@@ -2629,6 +2641,10 @@ overflow: hidden;
   &__h {
     margin-left: 12px;
     color: @blue;
+    font-size: 30px;
+    .media(520px,{
+      font-size: 28px;
+    });
   }
 
   &__sliders {
