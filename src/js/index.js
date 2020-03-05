@@ -198,7 +198,8 @@ $(function() {
   d_popapVideoHub.on("click", e => {
     if (e.target !== $(".d_modal-video__height")) {
       $(".d_popapVideo").addClass("d-none");
-
+      let d_Iframe = $('.d_modal-video__height').find('iframe')
+      d_Iframe.attr('src', '')
       $("main").removeClass("d_blur");
       // $('main').style.zIndex= '0';
       $(".d_popapVideo")[0].style.zIndex = "0";
@@ -209,7 +210,9 @@ $(function() {
 
   d_btnCloserPopapVideoHub.on("click", () => {
     $(".d_popapVideo").addClass("d-none");
-
+    let d_Iframe = $('.d_modal-video__height').find('iframe')
+    d_Iframe.attr('src', '')
+    
     $("main").removeClass("d_blur");
     // $('main').style.zIndex= '0';
     $(".d_popapVideo")[0].style.zIndex = "0";
@@ -221,7 +224,8 @@ $(function() {
     $("main").addClass("d_blur");
     // $('main').style.zIndex= '100';
     $(".d_popapVideo")[0].style.zIndex = "200";
-
+    let d_Iframe = $('.d_modal-video__height').find('iframe')
+    d_Iframe.attr('src', '')
     $(".d_popapVideo").removeClass("d-none");
     $("#masthead").addClass("blurred");
     $("#colophon").addClass("blurred");
@@ -926,7 +930,21 @@ $(function() {
   });
   let orangStroke = document.querySelector("#EllipseOrangStroke");
   let btnBackToTop = document.querySelector(".d_backToTop");
- 
+  let funcBackToTop = function() {
+    if (scrollTop >= 200) {
+      btnBackToTop.classList.remove("d-n");
+      targetTop = scrollTop + $(window).height();
+    } else {
+      btnBackToTop.classList.add("d-n");
+      targetTop = scrollTop;
+    }
+
+    let BodyHeight = $("body").height();
+    let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
+
+    let resultStokeOrange = (resultProcentBody * -251) / 100;
+    orangStroke.style.strokeDashoffset = resultStokeOrange;
+  };
   $(btnBackToTop).on("click", e => {
     let target = $(e.target);
 
@@ -987,7 +1005,6 @@ $(function() {
 
       let resultStokeOrange = (resultProcentBody * -251) / 100;
       orangStroke.style.strokeDashoffset = resultStokeOrange;
-
 
       if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
       $(document).scrollTop() > ($(document).height() - $(window).height())
