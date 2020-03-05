@@ -2,7 +2,9 @@ $(function() {
   // SLIDERS
   $(".d_slideBlock").slick({
     dots: true,
-    arrows: false
+    arrows: false,
+    // autoplay: true,
+  // autoplaySpeed: 6000,
   });
   //INIT слайдера
   $(".d_human__slidersGirl").on("init", function(event, slick) {
