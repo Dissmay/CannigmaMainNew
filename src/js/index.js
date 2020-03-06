@@ -184,15 +184,18 @@ $(function() {
     });
   }
 
-  $(window).on("scroll", e => {
-    let target = $(e.target);
-    let scrolledPixels = target.scrollTop();
-    if (scrolledPixels >= 108) {
-      $(".d_popapListHuman")[0].style.top = "44px";
-    } else {
-      $(".d_popapListHuman")[0].style.top = "109px";
-    }
-  });
+  if($('.d_popapListHuman').length){
+    $(window).on("scroll", e => {
+      let target = $(e.target);
+      let scrolledPixels = target.scrollTop();
+      if (scrolledPixels >= 108) {
+        $(".d_popapListHuman")[0].style.top = "44px";
+      } else {
+        $(".d_popapListHuman")[0].style.top = "109px";
+      }
+    });
+  }
+  
 
   $(".d_slideFirst").on("click", e => {
     let target = $(e.target);
