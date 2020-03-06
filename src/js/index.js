@@ -3,8 +3,8 @@ $(function() {
   $(".d_slideBlock").slick({
     dots: true,
     arrows: false,
-    // autoplay: true,
-  // autoplaySpeed: 6000,
+    autoplay: true,
+  autoplaySpeed: 6000,
   });
   //INIT слайдера
   $(".d_human__slidersGirl").on("init", function(event, slick) {
