@@ -132,8 +132,15 @@ $(function() {
   );
   const expertsName = document.querySelectorAll(".d_experts__sliderExpert_h");
   const humanListNameA = document.querySelectorAll(".d_news__h");
+  const mainSlideTextH = document.querySelectorAll('.d_slide__text_h');
+  const mainNewsBigCardH = document.querySelectorAll('.d_moreNews__bigCard_h');
+  const mainNewsLeftCardH = document.querySelectorAll('.d_moreNews__card_h');
+  const mainNewsSmallCardH = document.querySelectorAll('.d_moreNews__smallCard_h');
+  const mainleftLastnews = document.querySelectorAll('.d_paddingRight')
+
   // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   // console.log(smallCardMoreNews);
+  
   const endCharacter = "...";
   let substrFunction = (element, size) => {
     element.forEach(el => {
@@ -149,6 +156,13 @@ $(function() {
   substrFunction(expertsComments, 70);
   substrFunction(expertsName, 15);
   substrFunction(humanListNameA, 45);
+  substrFunction(mainSlideTextH, 60);
+  substrFunction(mainNewsBigCardH, 60);
+  substrFunction(mainNewsLeftCardH, 40);
+  substrFunction(mainNewsSmallCardH, 45);
+  substrFunction(mainleftLastnews, 65);
+
+
 
   if ($(window).width() <= 420) {
     substrFunction(expertsComments, 50);
