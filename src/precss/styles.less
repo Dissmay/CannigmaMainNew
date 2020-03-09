@@ -511,11 +511,10 @@ img {
   });
 
   &__blockNews {
-    padding-left: 14px;
-    padding-right: 14px;
+   
     background-color: #F7F7F7;
 
-    .size(4.1);
+    .size(4.28);
     .media(1024px, {
       order: 1;
       .size(0);
@@ -557,16 +556,18 @@ img {
     padding-left: 14px;
     padding-right: 14px; 
     padding-top: 30px; 
+    .media(520px,{
+      padding-left: 0;
+      padding-right: 0;
+    })
   }
   &__newsLi {
     position: relative;
 
-    padding-left: 12px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+  
     display: flex;
     box-shadow: 0 0 10px rgba(57, 62, 70, 0.15);
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     
     & a{
       position: absolute;
@@ -578,7 +579,7 @@ img {
   }
 
   &__blockHuman {
-    .size(8);
+    .size(7.64);
     .media(1024px, {
       .size(0) ;
       margin: 0;
@@ -594,7 +595,7 @@ img {
     &_h {
       margin-left: 12px;
       color:@blue;
-      font-size: 40px;
+      font-size: 30px;
       .media(520px,{
         font-size: 28px;
       });
@@ -682,8 +683,8 @@ img {
       }
       &__elips {
         position: absolute;
-        width: 20px;
-        height: 20px;
+        width: 19px;
+        height: 19px;
         background-color: #fdce68;
         border-radius: 50%;
          cursor: pointer;
@@ -692,11 +693,17 @@ img {
           width: 29px;
           height: 29px;
           opacity: 1;
+          .media(576px,{
+            width: 23px;
+          height: 23px;
+            
+  
+          });
         }
         .media(576px,{
-          width: 25px;
-          height: 25px;
-          opacity: 0.5;
+          width: 16px;
+          height: 16px;
+          
 
         });
       }
@@ -706,8 +713,8 @@ img {
         margin-left: -95px;
         margin-top: 30px;
         .media(576px,{
-          margin-left: -77px;
-          margin-top: 5px;
+          margin-left: -72px;
+          margin-top: 11px;
         });
       }
       &__elipsHeart {
@@ -722,7 +729,7 @@ img {
         margin-left: -155px;
         margin-top: 190px;
         .media(576px,{
-          margin-left: -124px;
+          margin-left: -119px;
             margin-top: 136px;
         });
       }
@@ -730,8 +737,8 @@ img {
         margin-left: -38px;
         margin-top: 191px;
         .media(576px,{
-            margin-top: 133px;
-            margin-left: -32px;
+            margin-top: 136px;
+            margin-left: -29px;
         });
       }
       &__elipsBelly{
@@ -754,16 +761,16 @@ img {
         margin-left: -128px;
         margin-top: 393px;
         .media(576px,{
-          margin-left: -102px;
-    margin-top: 285px;
+          margin-left: -99px;
+    margin-top: 292px;
         });
       }
       &__elipsLegsRight {
         margin-left: -70px;
         margin-top: 393px;
         .media(576px,{
-          margin-left: -58px;
-    margin-top: 285px;
+          margin-left: -53px;
+    margin-top: 292px;
         });
         
       }
@@ -809,16 +816,20 @@ img {
           width: 29px;
           height: 29px;
           opacity: 1;
+          .media(576px,{
+            width: 22px;
+            height: 22px;
+           
+          });
         }
         .media(576px,{
-          width: 25px;
-          height: 25px;
-          opacity: 0.5;
-
+          width: 15px;
+          height: 15px;
+         
         });
         .media(420px,{ 
-          width: 25px;
-          height: 25px;
+          width: 15px;
+          height: 15px;
         });
       }
 
@@ -828,23 +839,23 @@ img {
         margin-left: -94px;
         margin-top: 31px;
         .media(576px,{
-          margin-left: -75px;
-          margin-top: 17px;
+          margin-left: -71px;
+          margin-top: 25px;
         });
       }
       &__elipsHeart {
         margin-left: -77px;
         margin-top: 150px;
         .media(576px,{
-          margin-left: -67px;
-          margin-top: 104px;
+          margin-left: -57px;
+          margin-top: 116px;
         });
       }
       &__elipsArmLeft {
         margin-left: -158px;
         margin-top: 199px;
         .media(576px,{
-          margin-left: -126px;
+          margin-left: -116px;
           margin-top: 149px;
         });
       } 
@@ -852,7 +863,7 @@ img {
         margin-left: -40px;
         margin-top: 199px;
         .media(576px,{
-          margin-left: -32px;
+          margin-left: -29px;
           margin-top: 150px;
         });
       }
@@ -860,8 +871,8 @@ img {
         margin-left: -97px;
         margin-top: 229px;
         .media(576px,{
-          margin-left: -79px;
-          margin-top: 173px;
+          margin-left: -68px;
+          margin-top: 202px;
         });
       }
       &__elipsStomach {
@@ -872,16 +883,16 @@ img {
         margin-left: -127px;
         margin-top: 390px;
         .media(576px,{
-          margin-left: -99px;
-          margin-top: 297px;
+          margin-left: -90px;
+          margin-top: 288px;
         });
       }
       &__elipsLegsRight {
         margin-left: -67px;
         margin-top: 390px;
         .media(576px,{  
-          margin-left: -54px;
-          margin-top: 297px;
+          margin-left: -49px;
+          margin-top: 288px;
         });
       }
     }
@@ -1985,6 +1996,11 @@ img {
     }
   }
 }
+.d_borderNoneNews{
+  .media(520px,{
+    border: none;
+  });
+}
 
 .d_news {
   .col();
@@ -2021,6 +2037,7 @@ img {
     margin-right: 10px;
     width: 145px;
     height: 145px;
+   
     & img{
       height: 100%;
       width: 100%;
@@ -2057,6 +2074,11 @@ overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 6px;
+    width: 100%;
+    flex-shrink: 8;
    
   }
   &__h {
@@ -2235,7 +2257,7 @@ overflow: hidden;
   &__h {
     margin-left: 12px;
     color:@blue;
-    font-size: 30px;
+    font-size: 35px;
     .media(520px,{
       font-size: 28px;
     });
@@ -2648,7 +2670,7 @@ overflow: hidden;
   &__h {
     margin-left: 12px;
     color: @blue;
-    font-size: 30px;
+    font-size: 35px;
     .media(520px,{
       font-size: 28px;
     });
