@@ -23,7 +23,9 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    fade: true,
+    speed: 3000,
+    autoplay:true,
+    autoplaySpeed: 6000,
     asNavFor: ".d_slideWrapLast",
     prevArrow: $(".d_slideFirst__prev"),
     nextArrow: $(".d_slideFirst__next"),
@@ -45,7 +47,7 @@ $(function() {
 
     asNavFor: ".d_slideWrap",
     dots: true,
-
+    speed: 3000,
     focusOnSelect: true,
     prevArrow: $(".d_slideLast__prev"),
     nextArrow: $(".d_slideLast__next"),
@@ -153,8 +155,8 @@ $(function() {
     });
   };
 
-  substrFunction(expertsComments, 70);
-  substrFunction(expertsName, 15);
+  substrFunction(expertsComments, 100);
+  substrFunction(expertsName, 22);
   substrFunction(humanListNameA, 45);
   substrFunction(mainSlideTextH, 60);
   substrFunction(mainNewsBigCardH, 60);
@@ -992,7 +994,7 @@ $(function() {
       }
     };
   };
-  let timer;
+  // let timer;
 
   // document.addEventListener(
   //   "scroll",

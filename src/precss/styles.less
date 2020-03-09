@@ -2716,6 +2716,14 @@ overflow: hidden;
     &_card {
       display: flex;
       margin-bottom: 33px;
+      position: relative;
+      & a{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
     &_img {
       margin-right: 21px;
@@ -2728,7 +2736,7 @@ overflow: hidden;
      }
     }
     &_text {
-      width: 262px;
+      width: 340px;
     }
     &_h {
       font-size: 30px;
@@ -2788,6 +2796,7 @@ overflow: hidden;
 .d_experts__next {
   left: 90%;
   position: relative;
+  margin-left: 16px;
   &::before {
     content: "";
     width: 10px;
