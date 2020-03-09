@@ -140,7 +140,7 @@ $(function() {
   const mainNewsSmallCardH = document.querySelectorAll('.d_moreNews__smallCard_h');
   const mainleftLastnews = document.querySelectorAll('.d_paddingRight')
 
-  // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
   // console.log(smallCardMoreNews);
   
   const endCharacter = "...";
@@ -163,6 +163,8 @@ $(function() {
   substrFunction(mainNewsLeftCardH, 40);
   substrFunction(mainNewsSmallCardH, 45);
   substrFunction(mainleftLastnews, 65);
+  substrFunction(smallCardMoreNews, 22);
+
 
 
 
