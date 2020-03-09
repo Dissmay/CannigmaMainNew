@@ -2707,6 +2707,11 @@ overflow: hidden;
     }
     .media(768px,{
       height: 284px;
+      .shift-left(0);
+      .shift-right(0);
+      // margin: 0;
+      margin-left: 25px;
+      margin-right: 25px;
      
     });
     .media(420px,{
@@ -2719,6 +2724,9 @@ overflow: hidden;
       display: flex;
       margin-bottom: 33px;
       position: relative;
+      .media(768px,{
+        width: 300px;
+      });
       & a{
         position: absolute;
         top: 0;
