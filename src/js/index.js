@@ -23,8 +23,8 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    speed: 3000,
-    autoplay:true,
+    // speed: 3000,
+    // autoplay:true,
     autoplaySpeed: 6000,
     asNavFor: ".d_slideWrapLast",
     prevArrow: $(".d_slideFirst__prev"),
@@ -42,13 +42,16 @@ $(function() {
     ]
   });
   $(".d_slideWrapLast").slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
 
     asNavFor: ".d_slideWrap",
     dots: true,
-    speed: 3000,
-    focusOnSelect: true,
+    // speed: 3000,
+
+    centerMode: false,
+    variableWidth: true,
+    focusOnSelect: false,
     prevArrow: $(".d_slideLast__prev"),
     nextArrow: $(".d_slideLast__next"),
     responsive: [
@@ -139,8 +142,9 @@ $(function() {
   const mainNewsLeftCardH = document.querySelectorAll('.d_moreNews__card_h');
   const mainNewsSmallCardH = document.querySelectorAll('.d_moreNews__smallCard_h');
   const mainleftLastnews = document.querySelectorAll('.d_paddingRight')
-
   const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  const d_sliderFirstTextH = document.querySelectorAll('.d_sliderFirst__text_h')
+  const d_sliderLastVideoH = document.querySelectorAll('.d_sliderLast__video_hA')
   // console.log(smallCardMoreNews);
   
   const endCharacter = "...";
@@ -164,6 +168,8 @@ $(function() {
   substrFunction(mainNewsSmallCardH, 45);
   substrFunction(mainleftLastnews, 65);
   substrFunction(smallCardMoreNews, 22);
+  substrFunction(d_sliderFirstTextH, 60);
+  substrFunction(d_sliderLastVideoH, 60);
 
 
 
