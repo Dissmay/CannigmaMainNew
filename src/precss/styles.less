@@ -507,7 +507,11 @@ img {
   margin-bottom: 30px;
   .media(1024px, {flex-direction: column;});
   .media(576px,{
-    margin-top: 18px;
+    padding-top: 18px;
+  });
+  .media(520px,{
+    background-color: #F7F7F7;
+    background-clip: border-box
   });
 
   &__blockNews {
@@ -585,6 +589,7 @@ img {
       margin: 0;
       width: 100%;
     });
+   
     &_textDiv {
       border-top: 5px solid @blue;
       padding-top: 15px;
@@ -1103,7 +1108,7 @@ img {
       display: none;
       margin-left: 25px;
       padding-right: 25px;
-      width: 283px;
+      width: 268px;
       .media(1025px,{
         width: 360px;
       });
@@ -1118,7 +1123,7 @@ img {
         display: block;
       }
       &::-webkit-scrollbar {
-        width: 22px; /* 1 - вертикальный скроллбар */
+        width: 16px; /* 1 - вертикальный скроллбар */
       }
       &::-webkit-scrollbar:horizontal {
         height: 42px; /* 1 - горизонтальный скроллбар */
@@ -1127,7 +1132,7 @@ img {
 
       &::-webkit-scrollbar-track-piece {
         background: url(../img/svg/ars.svg); /* 4 – видимая часть трека */
-        background-size: 24px 1000px;
+        background-size: 17px 1000px;
       }
       &::-webkit-scrollbar-thumb {
         background: @blue;
@@ -1135,7 +1140,7 @@ img {
       }
     }
     &_li {
-      width: 100%;
+      width: 242px;
       height: 52px;
       background-color: white;
       cursor: pointer;
@@ -1149,6 +1154,9 @@ img {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      .media(1024px,{
+        width: 322px;
+      });
       &__a{
         position: absolute;
         top: 0;
@@ -1920,7 +1928,9 @@ img {
 // Essentials
 .d_essentials {
   position: relative;
-  
+  .media(520px,{
+    background-color: #F7F7F7;
+  });
   &__textDiv {
     border-top: 5px solid @blue;
     padding-top: 15px;
@@ -2077,6 +2087,7 @@ overflow: hidden;
     padding-right: 6px;
     width: 100%;
     flex-shrink: 8;
+    background-color:#fff;
    
   }
   &__h {
