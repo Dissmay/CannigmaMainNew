@@ -23,8 +23,8 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    // speed: 3000,
-    // autoplay:true,
+    speed: 3000,
+    autoplay:true,
     autoplaySpeed: 6000,
     asNavFor: ".d_slideWrapLast",
     prevArrow: $(".d_slideFirst__prev"),
@@ -47,7 +47,7 @@ $(function() {
 
     asNavFor: ".d_slideWrap",
     dots: true,
-    // speed: 3000,
+    speed: 3000,
 
     centerMode: false,
     variableWidth: true,
