@@ -3,8 +3,8 @@ $(function() {
   $(".d_slideBlock").slick({
     dots: true,
     arrows: false,
-    // autoplay: true,
-  // autoplaySpeed: 6000,
+    autoplay: true,
+  autoplaySpeed: 6000,
   });
   //INIT слайдера
   $(".d_human__slidersGirl").on("init", function(event, slick) {
@@ -23,7 +23,9 @@ $(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    fade: true,
+    speed: 3000,
+    autoplay:true,
+    autoplaySpeed: 6000,
     asNavFor: ".d_slideWrapLast",
     prevArrow: $(".d_slideFirst__prev"),
     nextArrow: $(".d_slideFirst__next"),
@@ -40,13 +42,16 @@ $(function() {
     ]
   });
   $(".d_slideWrapLast").slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
 
     asNavFor: ".d_slideWrap",
     dots: true,
+    speed: 3000,
 
-    focusOnSelect: true,
+    centerMode: false,
+    variableWidth: true,
+    focusOnSelect: false,
     prevArrow: $(".d_slideLast__prev"),
     nextArrow: $(".d_slideLast__next"),
     responsive: [
@@ -137,8 +142,10 @@ $(function() {
   const mainNewsLeftCardH = document.querySelectorAll('.d_moreNews__card_h');
   const mainNewsSmallCardH = document.querySelectorAll('.d_moreNews__smallCard_h');
   const mainleftLastnews = document.querySelectorAll('.d_paddingRight')
-
-  // const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  const smallCardMoreNews = document.querySelectorAll('.d_moreNews__smallCard_p');
+  const d_sliderFirstTextH = document.querySelectorAll('.d_sliderFirst__text_h')
+  const d_sliderLastVideoH = document.querySelectorAll('.d_sliderLast__video_hA')
+  // const d_mainPageNewsH = document.querySelectorAll('.d_news__h');
   // console.log(smallCardMoreNews);
   
   const endCharacter = "...";
@@ -153,14 +160,19 @@ $(function() {
     });
   };
 
-  substrFunction(expertsComments, 70);
-  substrFunction(expertsName, 15);
-  substrFunction(humanListNameA, 45);
+  substrFunction(expertsComments, 100);
+  substrFunction(expertsName, 22);
+  substrFunction(humanListNameA, 37);
   substrFunction(mainSlideTextH, 60);
   substrFunction(mainNewsBigCardH, 60);
   substrFunction(mainNewsLeftCardH, 40);
   substrFunction(mainNewsSmallCardH, 45);
   substrFunction(mainleftLastnews, 65);
+  substrFunction(smallCardMoreNews, 22);
+  substrFunction(d_sliderFirstTextH, 60);
+  substrFunction(d_sliderLastVideoH, 60);
+
+
 
 
 
@@ -184,15 +196,18 @@ $(function() {
     });
   }
 
-  $(window).on("scroll", e => {
-    let target = $(e.target);
-    let scrolledPixels = target.scrollTop();
-    if (scrolledPixels >= 108) {
-      $(".d_popapListHuman")[0].style.top = "44px";
-    } else {
-      $(".d_popapListHuman")[0].style.top = "109px";
-    }
-  });
+  if($('.d_popapListHuman').length){
+    $(window).on("scroll", e => {
+      let target = $(e.target);
+      let scrolledPixels = target.scrollTop();
+      if (scrolledPixels >= 108) {
+        $(".d_popapListHuman")[0].style.top = "44px";
+      } else {
+        $(".d_popapListHuman")[0].style.top = "109px";
+      }
+    });
+  }
+  
 
   $(".d_slideFirst").on("click", e => {
     let target = $(e.target);
@@ -946,21 +961,21 @@ $(function() {
   });
   let orangStroke = document.querySelector("#EllipseOrangStroke");
   let btnBackToTop = document.querySelector(".d_backToTop");
-  let funcBackToTop = function() {
-    if (scrollTop >= 200) {
-      btnBackToTop.classList.remove("d-n");
-      targetTop = scrollTop + $(window).height();
-    } else {
-      btnBackToTop.classList.add("d-n");
-      targetTop = scrollTop;
-    }
+  // let funcBackToTop = function() {
+  //   if (scrollTop >= 200) {
+  //     btnBackToTop.classList.remove("d-n");
+  //     targetTop = scrollTop + $(window).height();
+  //   } else {
+  //     btnBackToTop.classList.add("d-n");
+  //     targetTop = scrollTop;
+  //   }
 
-    let BodyHeight = $("body").height();
-    let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
+  //   let BodyHeight = $("body").height();
+  //   let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
 
-    let resultStokeOrange = (resultProcentBody * -251) / 100;
-    orangStroke.style.strokeDashoffset = resultStokeOrange;
-  };
+  //   let resultStokeOrange = (resultProcentBody * -251) / 100;
+  //   orangStroke.style.strokeDashoffset = resultStokeOrange;
+  // };
   $(btnBackToTop).on("click", e => {
     let target = $(e.target);
 
@@ -989,45 +1004,45 @@ $(function() {
       }
     };
   };
-  let timer;
+  // let timer;
 
-  document.addEventListener(
-    "scroll",
-    trottled(e => {
+  // document.addEventListener(
+  //   "scroll",
+  //   trottled(e => {
     
      
-      let target = $(e.target);
-      let targetTop = null;
-      let scrollTop = $(document).scrollTop();
-      if (timer) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(function() {
-        btnBackToTop.classList.add("d-n");
-      }, 1000);
+  //     let target = $(e.target);
+  //     let targetTop = null;
+  //     let scrollTop = $(document).scrollTop();
+  //     if (timer) {
+  //       clearTimeout(timer);
+  //     }
+  //     timer = setTimeout(function() {
+  //       btnBackToTop.classList.add("d-n");
+  //     }, 1000);
 
-      if (scrollTop >= 200) {
-        btnBackToTop.classList.remove("d-n");
-        targetTop = scrollTop + $(window).height();
+  //     if (scrollTop >= 200) {
+  //       btnBackToTop.classList.remove("d-n");
+  //       targetTop = scrollTop + $(window).height();
      
 
-      } else {
-        btnBackToTop.classList.add("d-n");
-        targetTop = scrollTop;
-      }
+  //     } else {
+  //       btnBackToTop.classList.add("d-n");
+  //       targetTop = scrollTop;
+  //     }
 
-      let BodyHeight = $(document).height();
-      let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
+  //     let BodyHeight = $(document).height();
+  //     let resultProcentBody = (targetTop * 100) / BodyHeight + 100;
 
-      let resultStokeOrange = (resultProcentBody * -251) / 100;
-      orangStroke.style.strokeDashoffset = resultStokeOrange;
+  //     let resultStokeOrange = (resultProcentBody * -251) / 100;
+  //     orangStroke.style.strokeDashoffset = resultStokeOrange;
 
-      if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
-      $(document).scrollTop() > ($(document).height() - $(window).height())
-      ) {
-        btnBackToTop.classList.remove("d-n");
-        clearTimeout(timer); 
-      }
-    })
-  );
+  //     if ($(document).scrollTop() == ($(document).height() - $(window).height()) ||
+  //     $(document).scrollTop() > ($(document).height() - $(window).height())
+  //     ) {
+  //       btnBackToTop.classList.remove("d-n");
+  //       clearTimeout(timer); 
+  //     }
+  //   })
+  // );
 });
