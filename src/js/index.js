@@ -164,10 +164,10 @@ $(function() {
   substrFunction(expertsName, 22);
   substrFunction(humanListNameA, 37);
   substrFunction(mainSlideTextH, 60);
-  substrFunction(mainNewsBigCardH, 60);
+  substrFunction(mainNewsBigCardH, 70);
   substrFunction(mainNewsLeftCardH, 40);
   substrFunction(mainNewsSmallCardH, 45);
-  substrFunction(mainleftLastnews, 65);
+  substrFunction(mainleftLastnews, 50);
   substrFunction(smallCardMoreNews, 42);
   substrFunction(d_sliderFirstTextH, 60);
   substrFunction(d_sliderLastVideoH, 60);
