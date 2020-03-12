@@ -168,7 +168,7 @@ $(function() {
   substrFunction(mainNewsLeftCardH, 40);
   substrFunction(mainNewsSmallCardH, 45);
   substrFunction(mainleftLastnews, 65);
-  substrFunction(smallCardMoreNews, 22);
+  substrFunction(smallCardMoreNews, 42);
   substrFunction(d_sliderFirstTextH, 60);
   substrFunction(d_sliderLastVideoH, 60);
 
