@@ -2044,7 +2044,7 @@ img {
     position: relative;
     border-right: 8px solid;
     border-color: #ffab72;
-    margin-right: 10px;
+    // margin-right: 10px;
     width: 162px;
     height: 145px;
    
@@ -2089,6 +2089,8 @@ overflow: hidden;
     padding-right: 6px;
     width: 100%;
     flex-shrink: 8;
+    padding-left: 10px !important;
+
     background-color:#fff;
    
   }
@@ -2391,6 +2393,7 @@ overflow: hidden;
   display: flex !important;
   align-items: center;
   outline: none;
+  position: relative;
 }
 
 .d_sliderLast {
@@ -2446,7 +2449,7 @@ overflow: hidden;
     -moz-osx-font-smoothing: grayscale;
   }
   &__video {
-    
+    position: relative;
     &_play {
       position: absolute;
       display: block;
@@ -2464,8 +2467,9 @@ overflow: hidden;
       padding-left: 10px;
       padding-top: 10px;
       padding-bottom: 10px;
+      padding-right: 20px;
       // padding-right: 46px;
-      width: 156px;
+      min-width: 156px; 
     }
     &_a {
       position: absolute;
