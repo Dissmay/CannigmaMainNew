@@ -199,15 +199,15 @@ $(function() {
   //SUBSTRTEXT
   let interval = null;
 
-  if ($(window).width() >= 768) {
-    if ($(activeClassHuman[0]).hasClass("active")) {
-      clearInterval(interval);
+  // if ($(window).width() >= 768) {
+  //   if ($(activeClassHuman[0]).hasClass("active")) {
+  //     clearInterval(interval);
 
-      interval = setInterval(e => {
-        btnGirlNextInterval();
-      }, 3000);
-    }
-  }
+  //     interval = setInterval(e => {
+  //       btnGirlNextInterval();
+  //     }, 3000);
+  //   }
+  // }
   function btnGirlNextInterval() {
     btnGirlNext.click();
   }
@@ -893,12 +893,12 @@ $(function() {
 
     Array.prototype.forEach.call($(children), (e, n) => {
       if (e.parentNode.getAttribute("id") == "blockGirl") {
-        if ($(window).width() >= 768) {
-          clearInterval(interval);
-          interval = setInterval(e => {
-            btnGirlNextInterval();
-          }, 3000);
-        }
+        // if ($(window).width() >= 768) {
+        //   clearInterval(interval);
+        //   interval = setInterval(e => {
+        //     btnGirlNextInterval();
+        //   }, 3000);
+        // }
         
         
         findAttr();
@@ -922,12 +922,12 @@ $(function() {
         let activeElipsTwo = document.querySelector(
           ".d_human__img_man__elips.active"
         );
-        if ($(window).width() >= 768) {
-          clearInterval(interval);
-          interval = setInterval(e => {
-            btnManNextInterval();
-          }, 3000);
-        }
+        // if ($(window).width() >= 768) {
+        //   clearInterval(interval);
+        //   interval = setInterval(e => {
+        //     btnManNextInterval();
+        //   }, 3000);
+        // }
        
 
         getImgHuman($(activeElipsTwo)[0].getAttribute("data-id"));
@@ -951,24 +951,28 @@ $(function() {
       manBtns[0].classList.remove("active");
       $(slidersGirl).addClass("active");
       $(slidersMan).removeClass("active");
-      $(".d_human__slidersMan").slick("unslick");
+      if ($(window).width() <= 520) {
+        $(".d_human__slidersMan").slick("unslick");
 
-      $(".d_human__slidersGirl").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false
-      });
+        $(".d_human__slidersGirl").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false
+        });
+      }
+     
     } else {
       manBtns[0].classList.add("active");
       girlBtns[0].classList.remove("active");
       $(slidersMan).addClass("active");
       $(slidersGirl).removeClass("active");
-      $(".d_human__slidersGirl").slick("unslick");
 
       if (document.documentElement.clientWidth <= 577) {
+      $(".d_human__slidersGirl").slick("unslick");
+
         $(".d_human__slidersMan").slick({
           slidesToShow: 1,
           slidesToScroll: 1,
