@@ -317,7 +317,7 @@ $(function() {
     $(".d_popapListHuman")[0].style.top = "108px";
     // console.log($(wi));
 
-    $(".d_experts__h")[1].innerText = target.attr("data-btnText");
+    $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
     $(".d_popapListHuman").removeClass("d-n");
 
     let listImg = $(".d_popapSliderImg").children();
@@ -384,7 +384,7 @@ $(function() {
     });
     let dataText = $(filteredList[ind]).attr("data-Text");
 
-    $(".d_experts__h")[1].innerText = dataText;
+    $(".d_popapDivTextH")[0].innerText = dataText;
 
     $(filteredList[ind]).addClass("active");
   });
@@ -437,7 +437,7 @@ $(function() {
     $(filteredList[ind]).addClass("active");
     let dataText = $(filteredList[ind]).attr("data-Text");
 
-    $(".d_experts__h")[1].innerText = dataText;
+    $(".d_popapDivTextH")[0].innerText = dataText;
   });
   let newDataIdImg = null;
 
@@ -449,7 +449,7 @@ $(function() {
     $(window).scrollTop(0);
     $("body").css("overflowY", "hidden");
     $(".d_popapListHuman")[0].style.top = "108px";
-    $(".d_experts__h")[1].innerText = target.attr("data-btnText");
+    $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
 
     let dataIdImg = $(".d_popapSliderImg__img");
 
