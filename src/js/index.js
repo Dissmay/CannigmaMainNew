@@ -187,17 +187,20 @@ $(function() {
     // autoClickSliderMobail[0].click();
   // }
 
+  
+ 
+
+  if ($(window).width() <= 458) {
+    substrFunction(humanListNameA, 31);
+
+  }
   if ($(window).width() <= 420) {
     substrFunction(expertsComments, 50);
-    substrFunction(humanListNameA, 25);
+    substrFunction(humanListNameA, 31);
   }
   if ($(window).width() <= 375) {
     substrFunction(expertsComments, 40);
     substrFunction(humanListNameA, 30);
-
-  }
-  if ($(window).width() <= 458) {
-    substrFunction(humanListNameA, 35);
 
   }
   // substrFunction(smallCardMoreNews, 20);
