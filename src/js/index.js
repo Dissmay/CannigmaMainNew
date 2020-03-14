@@ -193,6 +193,12 @@ $(function() {
   }
   if ($(window).width() <= 375) {
     substrFunction(expertsComments, 40);
+    substrFunction(humanListNameA, 30);
+
+  }
+  if ($(window).width() <= 458) {
+    substrFunction(humanListNameA, 35);
+
   }
   // substrFunction(smallCardMoreNews, 20);
 
