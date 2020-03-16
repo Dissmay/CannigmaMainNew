@@ -1,29 +1,20 @@
 @import "libs/vars.less";
 @import "libs/mixins.less";
 
-.d_backToTop{
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    cursor: pointer;
+.d_backToTop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
 
-    outline: none;
-    .media(520px,{
-        cursor:none;
-    });
-    &__img{
-       
-    }
-    & svg{
-        .media(520px,{
-            width: 46px;
-            height: 46px;
-          
-        });
-    }
-    
-   
+  outline: none;
+  .media(520px, {cursor: none;});
+  &__img {
+  }
+  & svg {
+    .media(520px, {width: 46px; height: 46px; display: none;});
+  }
 }
-#EllipseOrangStroke{
-    transition: all 0.3s;
+#EllipseOrangStroke {
+  transition: all 0.3s;
 }

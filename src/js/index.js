@@ -167,7 +167,7 @@ $(function() {
   substrFunction(expertsName, 22);
   substrFunction(humanListNameA, 37);
   substrFunction(mainSlideTextH, 60);
-  substrFunction(mainNewsBigCardH, 70);
+  substrFunction(mainNewsBigCardH, 67);
   substrFunction(mainNewsLeftCardH, 40);
   substrFunction(mainNewsSmallCardH, 45);
   substrFunction(mainleftLastnews, 50);
@@ -175,48 +175,44 @@ $(function() {
   substrFunction(d_sliderFirstTextH, 60);
   substrFunction(d_sliderLastVideoH, 60);
 
-  // if ($(window).width() <= 520) {
+  if ($(window).width() <= 520) {
     $(".d_human__slidersGirl").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
-      // autoplay: true,
-      // autoplaySpeed: 5000,
+      autoplay: true,
+      autoplaySpeed: 5000,
       arrows: false
     });
-    // autoClickSliderMobail[0].click();
-  // }
+    autoClickSliderMobail[0].click();
+  }
 
-  
- 
   if ($(window).width() <= 375) {
     substrFunction(expertsComments, 40);
     substrFunction(humanListNameA, 30);
-
   }
   if ($(window).width() <= 458) {
     substrFunction(humanListNameA, 31);
-
   }
   if ($(window).width() <= 420) {
     substrFunction(expertsComments, 50);
     substrFunction(humanListNameA, 31);
   }
-  
+
   // substrFunction(smallCardMoreNews, 20);
 
   //SUBSTRTEXT
   let interval = null;
 
-  // if ($(window).width() >= 768) {
-  //   if ($(activeClassHuman[0]).hasClass("active")) {
-  //     clearInterval(interval);
+  if ($(window).width() >= 768) {
+    if ($(activeClassHuman[0]).hasClass("active")) {
+      clearInterval(interval);
 
-  //     interval = setInterval(e => {
-  //       btnGirlNextInterval();
-  //     }, 3000);
-  //   }
-  // }
+      interval = setInterval(e => {
+        btnGirlNextInterval();
+      }, 5000);
+    }
+  }
   function btnGirlNextInterval() {
     btnGirlNext.click();
   }
@@ -671,6 +667,8 @@ $(function() {
     findAttr();
     let attrYellowCircle = e.target.getAttribute("data-id");
     let dMobailDotsWomanBtn = $(dMobailDotsWoman[attrYellowCircle]).children();
+    // console.log(dMobailDotsWomanBtn);
+
     if (document.documentElement.clientWidth <= 577) {
       dMobailDotsWomanBtn.click();
     }
@@ -902,14 +900,13 @@ $(function() {
 
     Array.prototype.forEach.call($(children), (e, n) => {
       if (e.parentNode.getAttribute("id") == "blockGirl") {
-        // if ($(window).width() >= 768) {
-        //   clearInterval(interval);
-        //   interval = setInterval(e => {
-        //     btnGirlNextInterval();
-        //   }, 3000);
-        // }
-        
-        
+        if ($(window).width() >= 768) {
+          clearInterval(interval);
+          interval = setInterval(e => {
+            btnGirlNextInterval();
+          }, 5000);
+        }
+
         findAttr();
         let activeElips = document.querySelector(
           ".d_human__img_girl__elips.active"
@@ -931,13 +928,12 @@ $(function() {
         let activeElipsTwo = document.querySelector(
           ".d_human__img_man__elips.active"
         );
-        // if ($(window).width() >= 768) {
-        //   clearInterval(interval);
-        //   interval = setInterval(e => {
-        //     btnManNextInterval();
-        //   }, 3000);
-        // }
-       
+        if ($(window).width() >= 768) {
+          clearInterval(interval);
+          interval = setInterval(e => {
+            btnManNextInterval();
+          }, 5000);
+        }
 
         getImgHuman($(activeElipsTwo)[0].getAttribute("data-id"));
         $(".d_human__list__h")[0].innerText = $(activeElipsTwo)[0].getAttribute(
@@ -960,37 +956,37 @@ $(function() {
       manBtns[0].classList.remove("active");
       $(slidersGirl).addClass("active");
       $(slidersMan).removeClass("active");
-      $(".d_human__slidersMan").slick("unslick");
-      // if ($(window).width() <= 520) {
-      //   
+      if ($(window).width() <= 520) {
+        $(".d_human__slidersMan").slick("unslick");
 
-      //   $(".d_human__slidersGirl").slick({
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     dots: true,
-      //     autoplay: true,
-      //     autoplaySpeed: 5000,
-      //     arrows: false
-      //   });
-      // }
-     
+        $(".d_human__slidersGirl").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          arrows: false
+        });
+      }
+      dMobailDotsWoman = $(".d_human__slidersGirl")
+        .find(".slick-dots")
+        .children();
     } else {
       manBtns[0].classList.add("active");
       girlBtns[0].classList.remove("active");
       $(slidersMan).addClass("active");
       $(slidersGirl).removeClass("active");
-    
 
       if (document.documentElement.clientWidth <= 577) {
-        // $(".d_human__slidersGirl").slick("unslick");
         $(".d_human__slidersMan").slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          // autoplay: true,
-          // autoplaySpeed: 5000,
+          autoplay: true,
+          autoplaySpeed: 5000,
           arrows: false
         });
+        $(".d_human__slidersGirl").slick("unslick");
 
         let clickBtnSliderManPreventDefault = slidersMan.find("li").children();
 
