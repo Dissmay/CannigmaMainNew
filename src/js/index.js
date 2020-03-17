@@ -1,4 +1,5 @@
 $(function() {
+  $(window).scrollTop(0);
   // SLIDERS
   $(".d_slideBlock").slick({
     dots: true,
@@ -96,7 +97,7 @@ $(function() {
 
   // SLIDERS
   //GLOBAL WINDOW SCROLL TOP 0
-  $(window).scrollTop(0);
+
   //GLOBAL WINDOW SCROLL TOP 0
 
   /* Tabs */
@@ -189,14 +190,14 @@ $(function() {
 
   if ($(window).width() <= 375) {
     substrFunction(expertsComments, 40);
-    substrFunction(humanListNameA, 30);
+    substrFunction(humanListNameA, 33);
   }
   if ($(window).width() <= 458) {
-    substrFunction(humanListNameA, 31);
+    substrFunction(humanListNameA, 33);
   }
   if ($(window).width() <= 420) {
     substrFunction(expertsComments, 50);
-    substrFunction(humanListNameA, 31);
+    substrFunction(humanListNameA, 33);
   }
 
   // substrFunction(smallCardMoreNews, 20);
