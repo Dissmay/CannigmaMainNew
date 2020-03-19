@@ -223,10 +223,14 @@ $(function() {
 
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
+    // console.log(d_btnCloserPopapVideoHub);
+    
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
     clickBtnSliderGirlPreventDefault.on("click", event => {
       event.preventDefault();
       event.target.disabled = true;
+      console.log(event);
+      
     });
   }
 
@@ -642,6 +646,8 @@ $(function() {
   let dMobailDotsWoman = $(slidersGirl)
     .find(".slick-dots")
     .children();
+    // console.log(dMobailDotsWoman);
+    
   elipsYellow.on("mouseover", e => {
     e.preventDefault();
     let target = $(e.target);
