@@ -1007,6 +1007,10 @@ img {
       line-height: 30px;
       margin-left: 25px;
       margin-right: 25px;
+      min-height: 102px;
+      text-align: left;
+      display: flex;
+      align-items: center;
     }
     &_girl {
       width: 100%;
@@ -3183,3 +3187,29 @@ height: 54vh;
 //     height: 100%;
 //   }
 // }
+.d_posLeft{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-color: #fdce68;
+  border-radius: 50%;
+   cursor: pointer;
+  &.active {
+    background-color: @blue;
+    width: 29px;
+    height: 29px;
+    opacity: 1;
+    .media(576px,{
+      width: 23px;
+    height: 23px;
+      
+
+    });
+  }margin-left: -155px;
+  margin-top: 190px;
+  .media(576px,{
+    margin-left: -119px;
+      margin-top: 136px;
+  });
+    
+}
