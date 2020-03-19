@@ -4,7 +4,7 @@ $(function() {
   $(".d_slideBlock").slick({
     dots: true,
     arrows: false,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 6000
   });
   //INIT слайдера
@@ -128,6 +128,8 @@ $(function() {
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
   let autoClickSliderMobail = $(".d_human__img_girl__elipsHeart");
   let dPopapUlHuman = document.querySelectorAll('.d_popapUlHuman');
+
+
   //SUBSTRTEXT
   const expertsComments = document.querySelectorAll(
     ".d_experts__sliderExpert_p"
@@ -225,7 +227,6 @@ $(function() {
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
     // console.log(d_btnCloserPopapVideoHub);
-
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
     clickBtnSliderGirlPreventDefault.on("click", event => {
       event.preventDefault();
@@ -234,22 +235,21 @@ $(function() {
     });
   }
   if ($(window).height() == 812) {
-    // console.log(d_btnCloserPopapVideoHub);
-    // dPopapUlHuman.style.height = '60px'
     $(dPopapUlHuman).map((index,target)=>{
       console.log(target.style.height = '60vh');
       
     })
-        
-    // console.log(dPopapUlHuman.style);
+   
+  }
+  if ($(window).height() <= 812) {
+  let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
     
-    let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
     clickBtnSliderGirlPreventDefault.on("click", event => {
       event.preventDefault();
       event.target.disabled = true;
-      // console.log(event);
     });
   }
+
 
   if ($(".d_popapListHuman").length) {
     $(window).on("scroll", e => {
