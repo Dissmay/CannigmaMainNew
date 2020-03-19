@@ -127,6 +127,7 @@ $(function() {
   let d_popapVideoHub = $(".d_popapVideo");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
   let autoClickSliderMobail = $(".d_human__img_girl__elipsHeart");
+  let dPopapUlHuman = document.querySelectorAll('.d_popapUlHuman');
   //SUBSTRTEXT
   const expertsComments = document.querySelectorAll(
     ".d_experts__sliderExpert_p"
@@ -224,13 +225,29 @@ $(function() {
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
     // console.log(d_btnCloserPopapVideoHub);
+
+    let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
+    clickBtnSliderGirlPreventDefault.on("click", event => {
+      event.preventDefault();
+      event.target.disabled = true;
+      // console.log(event);
+    });
+  }
+  if ($(window).height() == 812) {
+    // console.log(d_btnCloserPopapVideoHub);
+    // dPopapUlHuman.style.height = '60px'
+    $(dPopapUlHuman).map((index,target)=>{
+      console.log(target.style.height = '60vh');
+      
+    })
+        
+    // console.log(dPopapUlHuman.style);
     
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
     clickBtnSliderGirlPreventDefault.on("click", event => {
       event.preventDefault();
       event.target.disabled = true;
-      console.log(event);
-      
+      // console.log(event);
     });
   }
 
@@ -239,7 +256,7 @@ $(function() {
       let target = $(e.target);
       let scrolledPixels = target.scrollTop();
       if (scrolledPixels >= 108) {
-        $(".d_popapListHuman")[0].style.top = "44px";
+        $(".d_popapListHuman")[0].style.top = "58px";
       } else {
         $(".d_popapListHuman")[0].style.top = "109px";
       }
@@ -322,9 +339,9 @@ $(function() {
     let content = $(link);
 
     content.addClass("active");
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
     $("body").css("overflowY", "hidden");
-    $(".d_popapListHuman")[0].style.top = "108px";
+    // $(".d_popapListHuman")[0].style.top = "108px";
     // console.log($(wi));
 
     $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
@@ -456,9 +473,9 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
     $("body").css("overflowY", "hidden");
-    $(".d_popapListHuman")[0].style.top = "108px";
+    // $(".d_popapListHuman")[0].style.top = "108px";
     $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
 
     let dataIdImg = $(".d_popapSliderImg__img");
@@ -646,8 +663,8 @@ $(function() {
   let dMobailDotsWoman = $(slidersGirl)
     .find(".slick-dots")
     .children();
-    // console.log(dMobailDotsWoman);
-    
+  // console.log(dMobailDotsWoman);
+
   elipsYellow.on("mouseover", e => {
     e.preventDefault();
     let target = $(e.target);
@@ -971,7 +988,7 @@ $(function() {
           slidesToScroll: 1,
           dots: true,
           autoplay: true,
-          speed:100,
+          speed: 100,
           autoplaySpeed: 5000,
           arrows: false
         });
