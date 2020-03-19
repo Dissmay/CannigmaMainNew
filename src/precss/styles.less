@@ -123,7 +123,11 @@ img {
 .d_disFirstScreen {
   padding-top: 50px;
   padding-bottom: 90px;
-  .media(576px, {padding-top: 20px; padding-bottom: 20px;});
+  .media(576px, {padding-top: 0px; padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  });
 }
 .d_flex {
   display: flex;
@@ -518,6 +522,7 @@ img {
   .media(1024px, {flex-direction: column;});
   .media(576px,{
     padding-top: 35px;
+    margin-bottom: 0;
   });
   .media(520px,{
     background-color: #F7F7F7;

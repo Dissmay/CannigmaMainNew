@@ -4,7 +4,7 @@ $(function() {
   $(".d_slideBlock").slick({
     dots: true,
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 6000
   });
   //INIT слайдера
