@@ -971,6 +971,7 @@ $(function() {
           slidesToScroll: 1,
           dots: true,
           autoplay: true,
+          speed:100,
           autoplaySpeed: 5000,
           arrows: false
         });
