@@ -1,5 +1,4 @@
 $(function() {
-  $(window).scrollTop(0);
   // SLIDERS
   $(".d_slideBlock").slick({
     dots: true,
@@ -19,6 +18,8 @@ $(function() {
       .click();
   });
   //INIT слайдера
+  $(window).scrollTop(0);
+
 
   $(".d_slideWrap").slick({
     slidesToShow: 1,
@@ -127,6 +128,9 @@ $(function() {
   let d_popapVideoHub = $(".d_popapVideo");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
   let autoClickSliderMobail = $(".d_human__img_girl__elipsHeart");
+  let dPopapUlHuman = document.querySelectorAll('.d_popapUlHuman');
+
+
   //SUBSTRTEXT
   const expertsComments = document.querySelectorAll(
     ".d_experts__sliderExpert_p"
@@ -223,19 +227,37 @@ $(function() {
 
   if ($(window).height() <= 667) {
     d_btnCloserPopapVideoHub[0].style.top = "149px";
+    // console.log(d_btnCloserPopapVideoHub);
     let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
+    clickBtnSliderGirlPreventDefault.on("click", event => {
+      event.preventDefault();
+      event.target.disabled = true;
+      // console.log(event);
+    });
+  }
+  if ($(window).height() == 812) {
+    $(dPopapUlHuman).map((index,target)=>{
+      console.log(target.style.height = '60vh');
+      
+    })
+   
+  }
+  if ($(window).height() <= 812) {
+  let clickBtnSliderGirlPreventDefault = slidersGirl.find("li").children();
+    
     clickBtnSliderGirlPreventDefault.on("click", event => {
       event.preventDefault();
       event.target.disabled = true;
     });
   }
 
+
   if ($(".d_popapListHuman").length) {
     $(window).on("scroll", e => {
       let target = $(e.target);
       let scrolledPixels = target.scrollTop();
       if (scrolledPixels >= 108) {
-        $(".d_popapListHuman")[0].style.top = "44px";
+        $(".d_popapListHuman")[0].style.top = "58px";
       } else {
         $(".d_popapListHuman")[0].style.top = "109px";
       }
@@ -318,9 +340,9 @@ $(function() {
     let content = $(link);
 
     content.addClass("active");
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
     $("body").css("overflowY", "hidden");
-    $(".d_popapListHuman")[0].style.top = "108px";
+    // $(".d_popapListHuman")[0].style.top = "108px";
     // console.log($(wi));
 
     $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
@@ -452,9 +474,9 @@ $(function() {
     let link = target.attr("href");
     let content = $(link);
     content.addClass("active");
-    $(window).scrollTop(0);
+    // $(window).scrollTop(0);
     $("body").css("overflowY", "hidden");
-    $(".d_popapListHuman")[0].style.top = "108px";
+    // $(".d_popapListHuman")[0].style.top = "108px";
     $(".d_popapDivTextH")[0].innerText = target.attr("data-btnText");
 
     let dataIdImg = $(".d_popapSliderImg__img");
@@ -541,40 +563,40 @@ $(function() {
         arrowHeart[0].style.height = "96px";
         break;
       case "2":
-        arrowHeart[0].style.marginTop = "25px";
-        arrowHeart[0].style.marginLeft = "-148px";
-        arrowHeart[0].style.transform = "rotate(0deg)";
-        arrowHeart[0].style.height = "172px";
-        break;
-      case "3":
         arrowHeart[0].style.marginTop = "72px";
         arrowHeart[0].style.marginLeft = "-41px";
         arrowHeart[0].style.transform = "rotate(-16deg)";
         arrowHeart[0].style.height = "110px";
         break;
-      case "4":
+      case "3":
         arrowHeart[0].style.marginTop = "60px";
         arrowHeart[0].style.marginLeft = "-89px";
         arrowHeart[0].style.transform = "rotate(-7deg)";
         arrowHeart[0].style.height = "139px";
         break;
-      case "5":
+      case "4":
         arrowHeart[0].style.marginTop = "63px";
         arrowHeart[0].style.marginLeft = "-122px";
         arrowHeart[0].style.transform = "rotate(-15deg)";
         arrowHeart[0].style.height = "187px";
         break;
-      case "6":
-        arrowHeart[0].style.marginTop = "79px";
-        arrowHeart[0].style.marginLeft = "-184px";
-        arrowHeart[0].style.transform = "rotate(-16deg)";
-        arrowHeart[0].style.height = "301px";
-        break;
-      case "7":
+      case "5":
         arrowHeart[0].style.marginTop = "89px";
         arrowHeart[0].style.marginLeft = "-149px";
         arrowHeart[0].style.transform = "rotate(-25deg)";
         arrowHeart[0].style.height = "285px";
+        break;
+      // case "6":
+      //   arrowHeart[0].style.marginTop = "79px";
+      //   arrowHeart[0].style.marginLeft = "-184px";
+      //   arrowHeart[0].style.transform = "rotate(-16deg)";
+      //   arrowHeart[0].style.height = "301px";
+      //   break;
+      // case "7":
+      //   arrowHeart[0].style.marginTop = "89px";
+      //   arrowHeart[0].style.marginLeft = "-149px";
+      //   arrowHeart[0].style.transform = "rotate(-25deg)";
+      //   arrowHeart[0].style.height = "285px";
     }
   };
   let switchFuncMan = id => {
@@ -592,35 +614,35 @@ $(function() {
         arrowHeartMan[0].style.height = "117px";
         break;
       case "2":
-        arrowHeartMan[0].style.marginTop = "42px";
-        arrowHeartMan[0].style.marginLeft = "-147px";
-        arrowHeartMan[0].style.transform = "rotate(5deg)";
-        arrowHeartMan[0].style.height = "176px";
-        break;
-      case "3":
         arrowHeartMan[0].style.marginTop = "72px";
         arrowHeartMan[0].style.marginLeft = "-41px";
         arrowHeartMan[0].style.transform = "rotate(-9deg)";
         arrowHeartMan[0].style.height = "126px";
         break;
-      case "4":
+      case "3":
         arrowHeartMan[0].style.marginTop = "60px";
         arrowHeartMan[0].style.marginLeft = "-114px";
         arrowHeartMan[0].style.transform = "rotate(-11deg)";
         arrowHeartMan[0].style.height = "171px";
         break;
-
-      case "5":
-        arrowHeartMan[0].style.marginTop = "79px";
-        arrowHeartMan[0].style.marginLeft = "-184px";
-        arrowHeartMan[0].style.transform = "rotate(-18deg)";
-        arrowHeartMan[0].style.height = "287px";
-        break;
-      case "6":
+      case "4":
         arrowHeartMan[0].style.marginTop = "89px";
         arrowHeartMan[0].style.marginLeft = "-149px";
         arrowHeartMan[0].style.transform = "rotate(-27deg)";
         arrowHeartMan[0].style.height = "277px";
+        break;
+
+      // case "5":
+      //   arrowHeartMan[0].style.marginTop = "79px";
+      //   arrowHeartMan[0].style.marginLeft = "-184px";
+      //   arrowHeartMan[0].style.transform = "rotate(-18deg)";
+      //   arrowHeartMan[0].style.height = "287px";
+      //   break;
+      // case "6":
+      //   arrowHeartMan[0].style.marginTop = "89px";
+      //   arrowHeartMan[0].style.marginLeft = "-149px";
+      //   arrowHeartMan[0].style.transform = "rotate(-27deg)";
+      //   arrowHeartMan[0].style.height = "277px";
     }
   };
 
@@ -642,6 +664,8 @@ $(function() {
   let dMobailDotsWoman = $(slidersGirl)
     .find(".slick-dots")
     .children();
+  // console.log(dMobailDotsWoman);
+
   elipsYellow.on("mouseover", e => {
     e.preventDefault();
     let target = $(e.target);
@@ -965,7 +989,7 @@ $(function() {
           slidesToScroll: 1,
           dots: true,
           autoplay: true,
-          speed:100,
+          speed: 100,
           autoplaySpeed: 5000,
           arrows: false
         });

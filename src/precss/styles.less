@@ -123,12 +123,19 @@ img {
 .d_disFirstScreen {
   padding-top: 50px;
   padding-bottom: 90px;
-  .media(576px, {padding-top: 0px; padding-bottom: 0px;});
+  .media(576px, {padding-top: 0px; padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  });
 }
 .d_flex {
   display: flex;
   justify-content: space-between;
   .media(1200px, {justify-content: center;});
+  .media(568px,{
+    display: block;
+  })
 }
 
 .d_divHexagon {
@@ -350,7 +357,9 @@ img {
   width: 370px;
   .media(1200px, {display: none;});
   .media(768px, {display: block; width: 90%;});
-  .media(576px, {display: none;});
+  .media(576px, {display: block; width: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0);
+  });
   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.10);
   position: relative;
   & .slick-dots {
@@ -360,7 +369,9 @@ img {
     justify-content: center;
     margin-top: 10px;
     margin-left: 5px;
-  
+    .media(520px,{
+      margin-bottom: 35px;
+    });
     & li button {
       max-height: 10px;
       max-width: 10px;
@@ -416,6 +427,9 @@ img {
     background-color: @pink;
     position: relative;
     width: 100%;
+    .media(520px,{
+      height: 370px;
+    });
     & img{
       width: 100%;
       height: 100%;
@@ -507,7 +521,8 @@ img {
   margin-bottom: 30px;
   .media(1024px, {flex-direction: column;});
   .media(576px,{
-    padding-top: 18px;
+    padding-top: 35px;
+    margin-bottom: 0;
   });
   .media(520px,{
     background-color: #F7F7F7;
@@ -598,6 +613,9 @@ img {
       padding-bottom: 21px;
       border-bottom: 1px solid @blue;
       margin-bottom: 15px;
+      .media(576px,{
+        padding-bottom: 11px;
+      });
     }
     &_h {
       margin-left: 12px;
@@ -989,6 +1007,10 @@ img {
       line-height: 30px;
       margin-left: 25px;
       margin-right: 25px;
+      min-height: 102px;
+      text-align: left;
+      display: flex;
+      align-items: center;
     }
     &_girl {
       width: 100%;
@@ -1944,6 +1966,11 @@ img {
 }
 
 // Essentials
+.mb0EssenH{
+  .media(576px,{
+    margin-bottom: 3px;
+  });
+}
 .d_essentials {
   position: relative;
   .media(520px,{
@@ -1956,6 +1983,7 @@ img {
     border-bottom: 1px solid @blue;
     margin-bottom: 35px;
     color:@blue;
+    
   }
   &__h {
     margin-left: 12px;
@@ -1976,6 +2004,9 @@ img {
     justify-content: center;
     .media(320px,{
       width: 289px;
+    });
+    .media(576px,{
+      margin-bottom: 22px;
     });
   }
   &__li {
@@ -3016,7 +3047,7 @@ height: 54vh;
 
  });
  .media(375px,{
-    height: 49vh;
+    height: 51vh;
    });
  
 
@@ -3156,3 +3187,29 @@ height: 54vh;
 //     height: 100%;
 //   }
 // }
+.d_posLeft{
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  background-color: #fdce68;
+  border-radius: 50%;
+   cursor: pointer;
+  &.active {
+    background-color: @blue;
+    width: 29px;
+    height: 29px;
+    opacity: 1;
+    .media(576px,{
+      width: 23px;
+    height: 23px;
+      
+
+    });
+  }margin-left: -155px;
+  margin-top: 190px;
+  .media(576px,{
+    margin-left: -119px;
+      margin-top: 136px;
+  });
+    
+}
