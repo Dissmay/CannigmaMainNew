@@ -3,7 +3,7 @@ $(function() {
   $(".d_slideBlock").slick({
     dots: true,
     arrows: false,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 6000
   });
   //INIT слайдера
@@ -213,9 +213,9 @@ $(function() {
     if ($(activeClassHuman[0]).hasClass("active")) {
       clearInterval(interval);
 
-      interval = setInterval(e => {
-        btnGirlNextInterval();
-      }, 5000);
+      // interval = setInterval(e => {
+      //   btnGirlNextInterval();
+      // }, 5000);
     }
   }
   function btnGirlNextInterval() {
