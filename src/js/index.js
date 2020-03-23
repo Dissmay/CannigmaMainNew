@@ -213,9 +213,9 @@ $(function() {
     if ($(activeClassHuman[0]).hasClass("active")) {
       clearInterval(interval);
 
-      interval = setInterval(e => {
-        btnGirlNextInterval();
-      }, 5000);
+      // interval = setInterval(e => {
+      //   btnGirlNextInterval();
+      // }, 5000);
     }
   }
   function btnGirlNextInterval() {
