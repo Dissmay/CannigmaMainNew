@@ -332,6 +332,12 @@ if($(window).width() >= 767){
     $(".d_popapVideo").removeClass("d-none");
     $("#masthead").addClass("blurred");
     $("#colophon").addClass("blurred");
+    let target = $(e.target);
+
+    let linkIframe = target.attr("data-srcVideo");
+    let srcLink = $(".d_modal-video__height")
+      .children()
+      .attr("src", linkIframe);
   });
 
   popapListCloser.on("click", e => {
