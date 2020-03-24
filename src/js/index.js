@@ -126,7 +126,7 @@ $(function() {
   let popapListNextbtn = $(".d_popapSliderBtn__next");
   let d_popapVideoHub = $(".d_popapVideo");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
-  let autoClickSliderMobail = $(".d_human__img_girl__elipsHeart");
+  let autoClickSliderMobail = $(".d_headbtn");
   let dPopapUlHuman = document.querySelectorAll(".d_popapUlHuman");
 
   //SUBSTRTEXT
@@ -189,7 +189,7 @@ if($(window).width() >= 767){
       autoplaySpeed: 5000,
       arrows: false
     });
-    autoClickSliderMobail[0].click();
+    // autoClickSliderMobail[0].click();
   }
 
   if ($(window).width() <= 375) {
