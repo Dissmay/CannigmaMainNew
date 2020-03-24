@@ -327,6 +327,8 @@ if($(window).width() >= 767){
     $("main").addClass("d_blur");
     // $('main').style.zIndex= '100';
     $(".d_popapVideo")[0].style.zIndex = "200";
+    let d_Iframe = $(".d_modal-video__height").find("iframe");
+    d_Iframe.attr("src", "");
     $(".d_popapVideo").removeClass("d-none");
     $("#masthead").addClass("blurred");
     $("#colophon").addClass("blurred");
