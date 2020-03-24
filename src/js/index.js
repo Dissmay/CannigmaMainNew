@@ -322,6 +322,15 @@ if($(window).width() >= 767){
     $("#masthead").addClass("blurred");
     $("#colophon").addClass("blurred");
   });
+  $(".d_hubPageSliderTwo__a").on("click", e => {
+    e.preventDefault();
+    $("main").addClass("d_blur");
+    // $('main').style.zIndex= '100';
+    $(".d_popapVideo")[0].style.zIndex = "200";
+    $(".d_popapVideo").removeClass("d-none");
+    $("#masthead").addClass("blurred");
+    $("#colophon").addClass("blurred");
+  });
 
   popapListCloser.on("click", e => {
     $(".d_popapListHuman").addClass("d-n");
