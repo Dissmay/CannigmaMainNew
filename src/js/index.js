@@ -166,7 +166,9 @@ $(function() {
     });
   };
 
+if($(window).width() >= 767){
   substrFunction(expertsComments, 100);
+}
   substrFunction(expertsName, 22);
   substrFunction(humanListNameA, 37);
   substrFunction(mainSlideTextH, 60);
@@ -191,14 +193,14 @@ $(function() {
   }
 
   if ($(window).width() <= 375) {
-    substrFunction(expertsComments, 40);
+    // substrFunction(expertsComments, 40);
     substrFunction(humanListNameA, 33);
   }
   if ($(window).width() <= 458) {
     substrFunction(humanListNameA, 33);
   }
   if ($(window).width() <= 420) {
-    substrFunction(expertsComments, 50);
+    // substrFunction(expertsComments, 50);
     substrFunction(humanListNameA, 33);
   }
 

@@ -2761,6 +2761,9 @@ overflow: hidden;
       justify-content: center;
       margin-top: 10px;
       margin-left: 5px;
+    .media(576px,{
+      margin-bottom: 50px;
+    });
     
       & li button {
         max-height: 10px;
@@ -2802,7 +2805,7 @@ overflow: hidden;
       -moz-osx-font-smoothing: grayscale;
     }
     .media(768px,{
-      height: 284px;
+      // height: 284px;
       .shift-left(0);
       .shift-right(0);
       // margin: 0;
@@ -2811,11 +2814,12 @@ overflow: hidden;
      
     });
     .media(420px,{
-      height: 229px;
+      // height: 229px;
     });
    
   }
   &__sliderExpert {
+    height: auto;
     &_card {
       display: flex;
       margin-bottom: 33px;
@@ -2856,8 +2860,8 @@ overflow: hidden;
       line-height: 35px;
       .media(420px,{
         font-size: 22px;
-        margin-bottom: 13px;
-        line-height: 27px;
+        margin-bottom: 5px;
+        line-height: 20px;
 
       });
     }
