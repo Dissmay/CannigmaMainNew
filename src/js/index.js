@@ -237,7 +237,7 @@ if($(window).width() >= 767){
   }
   if ($(window).height() == 812) {
     $(dPopapUlHuman).map((index, target) => {
-      console.log((target.style.height = "60vh"));
+      target.style.height = "60vh"
     });
   }
   if ($(window).height() <= 812) {
