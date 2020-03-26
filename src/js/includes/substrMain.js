@@ -58,6 +58,6 @@ export default function() {
     // substrFunction(expertsComments, 50);
     substrFunction(humanListNameA, 33);
   }
-  console.log(1);
+  
 
 }

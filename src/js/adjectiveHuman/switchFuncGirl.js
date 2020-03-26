@@ -1,6 +1,6 @@
 
   let arrowHeart = $(".d_human__img_girl__arrowHeart");
-    console.log(arrowHeart[0]);
+    
     
 export default function(id) {
 

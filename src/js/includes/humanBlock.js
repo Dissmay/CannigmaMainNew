@@ -31,6 +31,8 @@ export default function() {
   let popapListNextbtn = $(".d_popapSliderBtn__next");
   let autoClickSliderMobail = $(".d_headbtn");
   let dPopapUlHuman = document.querySelectorAll(".d_popapUlHuman");
+  let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
+
   let copyDataImg = null;
 
   let newDataIdImg = null;
@@ -411,6 +413,8 @@ export default function() {
     e.preventDefault();
     let target = $(e.target);
     let link = target.parent().attr("href");
+
+
     let content = $(link);
     var activeImg = $(".d_human__img");
 
