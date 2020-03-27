@@ -225,7 +225,7 @@ export default function() {
 
     Array.prototype.forEach.call(elipsYellowMan, target => {
       target.classList.remove("active");
-    });
+    });   
 
     if (e.target.parentElement.getAttribute("id") == "blockGirl") {
       switchFunc(e.target.getAttribute("data-id"));
