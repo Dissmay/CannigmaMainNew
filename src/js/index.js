@@ -2,11 +2,6 @@ import substrMain from "../js/includes/substrMain";
 import sliderMain from "../js/includes/slidersMain";
 import humanBlock from "../js/includes/humanBlock";
 $(function() {
-    let kso = document.querySelector('.kso');
-    kso.addEventListener('click', async e =>{
-      console.log(2);
-      
-    })
   /* Tabs */
   let d_tabLink = $(".d_essentials__tabLink");
   /* Tabs */
