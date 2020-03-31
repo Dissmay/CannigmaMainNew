@@ -150,6 +150,8 @@ $(function() {
     sliderMain();
     substrMain();
     humanBlock();
+  // activeClassHuman.appendChild(cloneNodeRightGirl)
+
     popapListCloser.on("click", e => {
       $(".d_popapListHuman").addClass("d-n");
       $(".d_popapUlHuman").removeClass("active");

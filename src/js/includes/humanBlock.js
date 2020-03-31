@@ -32,132 +32,54 @@ export default function() {
   let autoClickSliderMobail = $(".d_headbtn");
   let dPopapUlHuman = document.querySelectorAll(".d_popapUlHuman");
   let d_btnCloserPopapVideoHub = $(".d_popapVideo__closer");
+  // let rightElipsGirl = document.querySelector(
+  //   ".d_human__img_girl__elipsArmRight"
+  // );
+  // let cloneNodeRightGirl = rightElipsGirl.cloneNode(true);
+  // cloneNodeRightGirl.style.marginLeft = "-157px";
+  // // console.log(cloneNodeRightGirl);
+
+  // $("#blockGirl")[0].appendChild(cloneNodeRightGirl);
+  // $(cloneNodeRightGirl).on("mouseover", e => {
+  //   e.preventDefault();
+  //   let target = $(e.target);
+  //   arrowHeartMan[0].style.opacity = "0";
+  //   arrowHeart[0].style.opacity = "1";
+
+  //   $(".d_human__list__h")[0].innerText = target[0].getAttribute("data-Text");
+  //   ulActive.map((index, ul) => {
+  //     ul.classList.remove("active");
+  //   });
+  //   getImgHuman(e.target.getAttribute("data-id"));
+
+  //   elipsYellow.map((e, target) => {
+  //     target.classList.remove("active");
+  //   });
+  //   if (e.target.parentElement.getAttribute("id") == "blockGirl") {
+  //     switchFunc(e.target.getAttribute("data-id"));
+  //   }
+  //   if (e.target.parentElement.getAttribute("id") == "blockMan") {
+  //     switchFuncMan(e.target.getAttribute("data-id"));
+  //   }
+
+  //   target.addClass("active");
+  //   findAttr();
+  //   let lolss = $(e.target.getAttribute("href"));
+  //   lolss.addClass("active");
+
+  //   let attrYellowCircle = e.target.getAttribute("data-id");
+  //   let dMobailDotsWomanBtn = $(dMobailDotsWoman[attrYellowCircle]).children();
+  //   // console.log(dMobailDotsWomanBtn);
+
+  //   if (document.documentElement.clientWidth <= 577) {
+  //     dMobailDotsWomanBtn.click();
+  //   }
+  //   $(rightElipsGirl).addClass("active");
+  // });
 
   let copyDataImg = null;
 
   let newDataIdImg = null;
-  // let getImgHuman = id => {
-  //   humanImgHeart.map((curValue, index) => {
-  //     index.setAttribute("src", "");
-  //     if (id == index.getAttribute("data-id")) {
-  //       let dataSrc = index.getAttribute("data-srcTwo");
-  //       index.setAttribute("src", dataSrc);
-  //     }
-  //   });
-  // };
-  // let findAttr = () => {
-  //   massElipsColor.forEach(e => {
-  //     if (e.classList.contains("active")) {
-  //       let lol = $(e.getAttribute("href"));
-  //       lol.addClass("active");
-  //     }
-  //   });
-  // };
-  // let findAttrMan = () => {
-  //   massElipsColorMan.forEach(e => {
-  //     if (e.classList.contains("active")) {
-  //       let lol = $(e.getAttribute("href"));
-  //       lol.addClass("active");
-  //     }
-  //   });
-  // };
-  // let switchFunc = id => {
-  //   switch (id) {
-  //     case "0":
-  //       arrowHeart[0].style.marginTop = "-11px";
-  //       arrowHeart[0].style.marginLeft = "-86px";
-  //       arrowHeart[0].style.transform = "rotate(28deg)";
-  //       arrowHeart[0].style.height = "77px";
-  //       break;
-  //     case "1":
-  //       arrowHeart[0].style.marginTop = "48px";
-  //       arrowHeart[0].style.marginLeft = "-61px";
-  //       arrowHeart[0].style.transform = "rotate(1deg)";
-  //       arrowHeart[0].style.height = "96px";
-  //       break;
-  //     case "2":
-  //       arrowHeart[0].style.marginTop = "72px";
-  //       arrowHeart[0].style.marginLeft = "-41px";
-  //       arrowHeart[0].style.transform = "rotate(-16deg)";
-  //       arrowHeart[0].style.height = "110px";
-  //       break;
-  //     case "3":
-  //       arrowHeart[0].style.marginTop = "60px";
-  //       arrowHeart[0].style.marginLeft = "-89px";
-  //       arrowHeart[0].style.transform = "rotate(-7deg)";
-  //       arrowHeart[0].style.height = "139px";
-  //       break;
-  //     case "4":
-  //       arrowHeart[0].style.marginTop = "63px";
-  //       arrowHeart[0].style.marginLeft = "-122px";
-  //       arrowHeart[0].style.transform = "rotate(-15deg)";
-  //       arrowHeart[0].style.height = "187px";
-  //       break;
-  //     case "5":
-  //       arrowHeart[0].style.marginTop = "89px";
-  //       arrowHeart[0].style.marginLeft = "-149px";
-  //       arrowHeart[0].style.transform = "rotate(-25deg)";
-  //       arrowHeart[0].style.height = "285px";
-  //       break;
-  //     // case "6":
-  //     //   arrowHeart[0].style.marginTop = "79px";
-  //     //   arrowHeart[0].style.marginLeft = "-184px";
-  //     //   arrowHeart[0].style.transform = "rotate(-16deg)";
-  //     //   arrowHeart[0].style.height = "301px";
-  //     //   break;
-  //     // case "7":
-  //     //   arrowHeart[0].style.marginTop = "89px";
-  //     //   arrowHeart[0].style.marginLeft = "-149px";
-  //     //   arrowHeart[0].style.transform = "rotate(-25deg)";
-  //     //   arrowHeart[0].style.height = "285px";
-  //   }
-  // };
-  // let switchFuncMan = id => {
-  //   switch (id) {
-  //     case "0":
-  //       arrowHeartMan[0].style.marginTop = "-2px";
-  //       arrowHeartMan[0].style.marginLeft = "-79px";
-  //       arrowHeartMan[0].style.transform = "rotate(37deg)";
-  //       arrowHeartMan[0].style.height = "70px";
-  //       break;
-  //     case "1":
-  //       arrowHeartMan[0].style.marginTop = "52px";
-  //       arrowHeartMan[0].style.marginLeft = "-82px";
-  //       arrowHeartMan[0].style.transform = "rotate(-4deg)";
-  //       arrowHeartMan[0].style.height = "117px";
-  //       break;
-  //     case "2":
-  //       arrowHeartMan[0].style.marginTop = "72px";
-  //       arrowHeartMan[0].style.marginLeft = "-41px";
-  //       arrowHeartMan[0].style.transform = "rotate(-9deg)";
-  //       arrowHeartMan[0].style.height = "126px";
-  //       break;
-  //     case "3":
-  //       arrowHeartMan[0].style.marginTop = "60px";
-  //       arrowHeartMan[0].style.marginLeft = "-114px";
-  //       arrowHeartMan[0].style.transform = "rotate(-11deg)";
-  //       arrowHeartMan[0].style.height = "171px";
-  //       break;
-  //     case "4":
-  //       arrowHeartMan[0].style.marginTop = "89px";
-  //       arrowHeartMan[0].style.marginLeft = "-149px";
-  //       arrowHeartMan[0].style.transform = "rotate(-27deg)";
-  //       arrowHeartMan[0].style.height = "277px";
-  //       break;
-
-  //     // case "5":
-  //     //   arrowHeartMan[0].style.marginTop = "79px";
-  //     //   arrowHeartMan[0].style.marginLeft = "-184px";
-  //     //   arrowHeartMan[0].style.transform = "rotate(-18deg)";
-  //     //   arrowHeartMan[0].style.height = "287px";
-  //     //   break;
-  //     // case "6":
-  //     //   arrowHeartMan[0].style.marginTop = "89px";
-  //     //   arrowHeartMan[0].style.marginLeft = "-149px";
-  //     //   arrowHeartMan[0].style.transform = "rotate(-27deg)";
-  //     //   arrowHeartMan[0].style.height = "277px";
-  //   }
-  // };
 
   // ELIPS COLOR AND WIDTH
 
@@ -201,6 +123,8 @@ export default function() {
 
     target.addClass("active");
     findAttr();
+
+    // lol.addClass('active')
     let attrYellowCircle = e.target.getAttribute("data-id");
     let dMobailDotsWomanBtn = $(dMobailDotsWoman[attrYellowCircle]).children();
     // console.log(dMobailDotsWomanBtn);
@@ -208,6 +132,11 @@ export default function() {
     if (document.documentElement.clientWidth <= 577) {
       dMobailDotsWomanBtn.click();
     }
+    // if ($(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).addClass("active");
+    // } else if (!$(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).removeClass("active");
+    // }
   });
 
   elipsYellowMan.on("mouseover", e => {
@@ -225,7 +154,7 @@ export default function() {
 
     Array.prototype.forEach.call(elipsYellowMan, target => {
       target.classList.remove("active");
-    });   
+    });
 
     if (e.target.parentElement.getAttribute("id") == "blockGirl") {
       switchFunc(e.target.getAttribute("data-id"));
@@ -293,6 +222,11 @@ export default function() {
     getImgHuman(datId);
 
     findAttr();
+    // if ($(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).addClass("active");
+    // } else if (!$(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).removeClass("active");
+    // }
   });
   btnManNext.on("click", e => {
     e.preventDefault();
@@ -371,6 +305,11 @@ export default function() {
     switchFunc(dataId);
     getImgHuman(dataId);
     findAttr();
+    // if ($(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).addClass("active");
+    // } else if (!$(rightElipsGirl).hasClass("active")) {
+    //   $(cloneNodeRightGirl).removeClass("active");
+    // }
   });
   btnManPrev.on("click", e => {
     e.preventDefault();
@@ -413,7 +352,6 @@ export default function() {
     e.preventDefault();
     let target = $(e.target);
     let link = target.parent().attr("href");
-
 
     let content = $(link);
     var activeImg = $(".d_human__img");
@@ -510,6 +448,7 @@ export default function() {
       dMobailDotsWoman = $(".d_human__slidersGirl")
         .find(".slick-dots")
         .children();
+      // console.log(dMobailDotsWoman);
     } else {
       manBtns[0].classList.add("active");
       girlBtns[0].classList.remove("active");
@@ -528,21 +467,6 @@ export default function() {
         $(".d_human__slidersGirl").slick("unslick");
 
         let clickBtnSliderManPreventDefault = slidersMan.find("li").children();
-
-        // setTimeout(() => {
-        //   clickBtnSliderManPreventDefault[1].click();
-        // }, 100);
-        // clickBtnSliderManPreventDefault[1].addEventListener("hello", function(event) {
-        //   // $(clickBtnSliderManPreventDefault[1]).click();
-        //   clickBtnSliderManPreventDefault[1].click()
-        //   return
-
-        // });
-        // clickBtnSliderManPreventDefault[1].dispatchEvent(new CustomEvent("hello", {
-
-        // }));
-
-        // clickBtnSliderManPreventDefault[1].click(clickBtnSliderManPreventDefault[1].click())
 
         clickBtnSliderManPreventDefault.on("click", event => {
           event.preventDefault();
@@ -567,6 +491,11 @@ export default function() {
       e.classList.remove("active");
     });
     massElipsColor[currentSlide].classList.add("active");
+    // if (massElipsColor[currentSlide].getAttribute("data-id") == 2) {
+    //   $(cloneNodeRightGirl).addClass("active");
+    // } else {
+    //   $(cloneNodeRightGirl).removeClass("active");
+    // }
   });
 
   $(".d_human__slidersMan").on("afterChange", function(
