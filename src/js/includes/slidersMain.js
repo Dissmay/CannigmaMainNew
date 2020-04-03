@@ -1,9 +1,9 @@
 export default function(){
-
+   
     $(".d_slideBlock").slick({
         dots: true,
         arrows: false,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 6000
       });
       $(".d_slideWrap").slick({
